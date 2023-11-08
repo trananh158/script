@@ -1,0 +1,262 @@
+local data_webhook ={
+	["4616814936"] = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG"
+}
+print("GOooooooooooooooo")
+local HttpService = game:GetService("HttpService")
+local Workspace = game:GetService("Workspace") 
+local plr = game:GetService("Players").LocalPlayer
+local RunService = game:GetService("RunService")
+local mouse = game.Players.LocalPlayer:GetMouse()
+local UserInputService = game:GetService("UserInputService")
+
+
+local v5 = require(game.ReplicatedStorage.src.Loader)
+local ItemInventoryServiceClient = v5.load_client_service(script, "ItemInventoryServiceClient")
+function get_inventory_items_unique_items()
+	return ItemInventoryServiceClient["session"]['inventory']['inventory_profile_data']['unique_items']
+end
+
+--------------------------------------------
+------------item drop result----------------
+local v5 = require(game.ReplicatedStorage.src.Loader)
+local ItemInventoryServiceClient = v5.load_client_service(script, "ItemInventoryServiceClient")
+function get_inventory_items_unique_items()
+	return ItemInventoryServiceClient["session"]['inventory']['inventory_profile_data']['unique_items']
+end
+function get_inventory_items()
+	return ItemInventoryServiceClient["session"]["inventory"]['inventory_profile_data']['normal_items']
+end
+function get_Units_Owner()
+	return ItemInventoryServiceClient["session"]["collection"]["collection_profile_data"]['owned_units']
+end
+local Count_Portal_list = 0
+local Table_All_Items_Old_data = {}
+local Table_All_Items_New_data = {}
+for v2, v3 in pairs(game:GetService("ReplicatedStorage").src.Data.Items:GetDescendants()) do
+	if v3:IsA("ModuleScript") then
+		for v4, v5 in pairs(require(v3)) do
+		    Table_All_Items_Old_data[v4] = {}
+			Table_All_Items_Old_data[v4]['Name'] = v5['name']
+		    Table_All_Items_Old_data[v4]['Count'] = 0
+			Table_All_Items_New_data[v4] = {}
+			Table_All_Items_New_data[v4]['Name'] = v5['name']
+			Table_All_Items_New_data[v4]['Count'] = 0
+		end
+	end
+end
+local Data_Units_All_Games = require(game:GetService("ReplicatedStorage").src.Data.Units)
+for i,v in pairs(Data_Units_All_Games) do
+    if v.rarity then
+        Table_All_Items_Old_data[i] = {}
+        Table_All_Items_Old_data[i]['Name'] = v['name']
+        Table_All_Items_Old_data[i]['Count'] = 0
+        Table_All_Items_Old_data[i]['Count Shiny'] = 0
+        Table_All_Items_New_data[i] = {}
+        Table_All_Items_New_data[i]['Name'] = v['name']
+        Table_All_Items_New_data[i]['Count'] = 0
+        Table_All_Items_New_data[i]['Count Shiny'] = 0
+    end
+end
+for i,v in pairs(get_inventory_items()) do
+	Table_All_Items_Old_data[i]['Count'] = v
+end
+for i,v in pairs(get_inventory_items_unique_items()) do
+    if string.find(v['item_id'],"portal") or string.find(v['item_id'],"disc") then
+        Count_Portal_list = Count_Portal_list + 1
+        Table_All_Items_Old_data[v['item_id']]['Count'] = Table_All_Items_Old_data[v['item_id']]['Count'] + 1
+    end
+end
+for i,v in pairs(get_Units_Owner()) do
+    Table_All_Items_Old_data[v["unit_id"]]['Count'] = Table_All_Items_Old_data[v["unit_id"]]['Count'] + 1
+    if v.shiny then
+        Table_All_Items_Old_data[v["unit_id"]]['Count'] = Table_All_Items_Old_data[v["unit_id"]]['Count'] - 1
+        Table_All_Items_Old_data[v["unit_id"]]['Count Shiny'] = Table_All_Items_Old_data[v["unit_id"]]['Count Shiny'] + 1
+    end
+end
+
+
+---------------------webhook----------------------------------
+function webhook()
+
+	--- Linh tinh
+	local Time = os.date('!*t', OSTime);
+	plr = game:GetService("Players").LocalPlayer
+	local thumbnails_avatar = HttpService:JSONDecode(game:HttpGet("https://thumbnails.roblox.com/v1/users/avatar-headshot?userIds=" .. game:GetService("Players").LocalPlayer.UserId .. "&size=150x150&format=Png&isCircular=true", true))
+	--------- Kiểm tra có thắng hay không
+	local result = "1"
+	if game:GetService("Players").LocalPlayer.PlayerGui:FindFirstChild("ResultsUI"):FindFirstChild("Holder").Title.Text == "VICTORY" then result = "VICTORY"
+	else result = "DEFEAT" end
+	print(result)
+	--- Xem cổng còn lại trong túi đồ
+	for i,v in pairs(get_inventory_items_unique_items()) do
+            if string.find(v['item_id'],"portal") then
+                --if v['item_id'] == Settings.SelectedSellPortals then
+                --if v["_unique_item_data"]["_unique_portal_data"]["portal_depth"] == Settings.SelectedSellTier then
+
+                    PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
+
+                --end
+            end
+        end
+--- Xem thông tin map
+	local plr = game:GetService("Players").LocalPlayer
+	ResultHolder = plr.PlayerGui:FindFirstChild("ResultsUI"):FindFirstChild("Holder")
+	--- Map và độ khó
+	
+	GetLevelData = game.workspace._MAP_CONFIG:WaitForChild("GetLevelData"):InvokeServer()
+	name = GetLevelData.id or GetLevelData.world or GetLevelData.map
+	world = GetLevelData.name
+	--New Mapname
+	local Loader = require(game.ReplicatedStorage.src.Loader)
+	local Maps = Loader.load_data(script, "Maps")
+	local v100 = Maps[Loader.LevelData.map]
+	MapsNameTEST = v100.name or GetLevelData.name
+	--Difficulty
+	MapDiff2 = game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Holder.Difficulty.Text
+	MapDiff3 = MapDiff2
+	if GetLevelData.name == "Summer Hunt" then MapDiff3 = " [ Default ] Is a Portal " end
+	
+	--- Thời gian & số wave (ttime[2]  waves[2])
+	
+	cwaves = game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Holder.Middle.WavesCompleted.Text
+	ctime = game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Holder.Middle.Timer.Text
+	waves = cwaves:split(": ")
+	if waves ~= nil and waves[2] == "999" then waves[2] = "Use [Auto Leave at Wave] or [Test Webhook]" end	
+	ttime = ctime:split(": ")
+	if waves ~= nil and ttime[2] == "22:55" then ttime[2] = "Use [Auto Leave at Wave] or [Test Webhook]" end
+	totaltime =  ResultHolder:FindFirstChild("Middle"):FindFirstChild("Timer").Text
+	totalwaves = ResultHolder:FindFirstChild("Middle"):FindFirstChild("WavesCompleted").Text
+	print(ttime)
+	print(waves)
+
+	--- Gem re + gold re + xp
+	
+	gold = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GoldReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
+	if gold == "+99999" then gold = "+0" end	    
+	gems = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GemReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
+	if gems == "+99999" then gems = "+0" end	 
+	
+	xpx = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("XPReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
+	xp = xpx:split(" ")
+	if xp[1] == "+99999" then xp[1] = "+0" end
+	
+	--- Item drop
+	local TextDropLabel = ""
+	local CountAmount = 1
+	for i,v in pairs(get_inventory_items()) do
+		Table_All_Items_New_data[i]['Count'] = v
+	end
+	for i,v in pairs(get_inventory_items_unique_items()) do
+		if string.find(v['item_id'],"portal") or string.find(v['item_id'],"disc") then
+			Table_All_Items_New_data[v['item_id']]['Count'] = Table_All_Items_New_data[v['item_id']]['Count'] + 1
+		end
+	end
+	for i,v in pairs(get_Units_Owner()) do
+		Table_All_Items_New_data[v["unit_id"]]['Count'] = Table_All_Items_New_data[v["unit_id"]]['Count'] + 1
+		if v.shiny then
+			Table_All_Items_New_data[v["unit_id"]]['Count'] = Table_All_Items_New_data[v["unit_id"]]['Count'] - 1
+		Table_All_Items_New_data[v["unit_id"]]['Count Shiny'] = Table_All_Items_New_data[v["unit_id"]]['Count Shiny'] + 1
+		end
+	end
+	for i,v in pairs(Table_All_Items_New_data) do
+		if v['Count'] > 0 and (v['Count'] - Table_All_Items_Old_data[i]['Count']) > 0 then
+			if v['Count Shiny'] and v['Count'] then
+				if v['Count'] > 0 or v['Count Shiny'] > 0 then
+					if v['Count'] > 0 and (v['Count'] - Table_All_Items_Old_data[i]['Count']) > 0 then
+						TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " : x" .. tostring(v['Count'] - Table_All_Items_Old_data[i]['Count'])
+						if v['Count Shiny'] > 0 and (v['Count Shiny'] - Table_All_Items_Old_data[i]['Count Shiny']) > 0 then
+							TextDropLabel = TextDropLabel .. " | " .. tostring(v['Name']) .. " (Shiny) : x" .. tostring(v['Count Shiny'] - Table_All_Items_Old_data[i]['Count Shiny']) .. "\n"
+							CountAmount = CountAmount + 1
+						else
+							TextDropLabel = TextDropLabel .. "\n"
+							CountAmount = CountAmount + 1
+						end
+					end
+				end
+			end
+		elseif v['Count Shiny'] and v['Count Shiny'] > 0 and (v['Count Shiny'] - Table_All_Items_Old_data[i]['Count Shiny']) > 0 then
+			TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " (Shiny) : x" .. tostring(v['Count Shiny'] - Table_All_Items_Old_data[i]['Count Shiny']) .. "\n"
+			CountAmount = CountAmount + 1
+		end
+	end
+	for i,v in pairs(Table_All_Items_New_data) do
+		if v['Count'] > 0 and (v['Count'] - Table_All_Items_Old_data[i]['Count']) > 0 then
+		--if v['Count'] > 0 and (v['Count'] == Table_All_Items_Old_data[i]['Count']) > 0 then
+			if v['Count Shiny'] and v['Count'] then
+			elseif string.find(i,"portal") or string.find(i,"disc") then
+				Count_Portal_list = Count_Portal_list + 1
+			if string.gsub(i, "%D", "") == "" then
+					TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " :item x" .. tostring(v['Count'] - Table_All_Items_Old_data[i]['Count']) .. "\n"
+			else
+					TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " Tier " .. tostring(string.gsub(i, "%D", "")) .. " : x" .. tostring(v['Count'] - Table_All_Items_Old_data[i]['Count']) .. "\n"
+				end
+				CountAmount = CountAmount + 1
+			else
+				TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " : x" .. tostring(v['Count'] - Table_All_Items_Old_data[i]['Count']) .. "("..v['Count']..")\n"
+				CountAmount = CountAmount + 1
+			end
+		end
+	end
+	--end
+
+	if TextDropLabel == "" then
+		TextDropLabel = "Not Have Items Drops"
+	end
+
+	
+	local data = {
+					  ["content"] = "@admin",
+					  ["embeds"] = {
+						{
+						  ["description"]= "\n```ini\nTên : ||**"..game:GetService("Players").LocalPlayer.Name.."**||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
+						  ["color"] = 9124924,
+						  ["fields"] = {
+							{
+							  ["name"] = "Map :",
+							  ["value"] = "```ini\n🌏Map : "..world.." \n🎚Độ khó : "..tostring(MapDiff3).. "\nKết quả : "..result.."\nWave : "..tostring(waves[2]).."\nTime : "..tostring(ttime[2]).." ⌛\n```"
+							},
+							{
+							  ["name"]= "Kết quả :",
+							  ["value"]= "```ini\n"..gold.." gold \n"..gems.."gem\n"..xp[1].."xp\n+ Canide\nItem :\n"..TextDropLabel.."\n```"
+							}
+						  },
+						  ["author"]= {
+							["name"]= "Loan Kitru hub"
+						  },
+						  ["footer"]= {
+							["text"]= "Discord Loan Kitru",
+							["icon_url"]= "https://cdn.discordapp.com/avatars/581434795813371913/0cccae82397f24c0323d7046333d9f8e.webp?size=128"
+						  },
+						  ["timestamp"]= string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
+						  ["thumbnail"]= {
+							["url"]= thumbnails_avatar.data[1].imageUrl
+						  }
+						}
+					  }
+					}
+        
+        local porn = game:GetService("HttpService"):JSONEncode(data)
+        local headers = {["content-type"] = "application/json"}
+        local request = http_request or request or HttpPost or syn.request or http.request
+        local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+        warn("Sending webhook notification...")
+		print("ruuunnnnnnn")
+        request(sex)
+end
+--wait(10)
+--webhook()
+
+coroutine.resume(coroutine.create(function()
+    task.spawn(function()
+        local GameFinished = game:GetService("Workspace"):WaitForChild("_DATA"):WaitForChild("GameFinished")
+        GameFinished:GetPropertyChangedSignal("Value"):Connect(function()
+            print("Changed", GameFinished.Value == true)
+            if GameFinished.Value == true then
+                repeat task.wait() until  game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Enabled == true
+                pcall(function() webhook() end)
+                warn("Wait next or leave")
+                task.wait(1.5)
+			end
+		end)
+	end)
+end))
