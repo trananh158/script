@@ -77,7 +77,8 @@ end
 
 ---------------------webhook----------------------------------
 function webhook()
-
+	if data_webhook[game:GetService("Players").LocalPlayer.UserId] ~= nil then
+		url = data_webhook[game:GetService("Players").LocalPlayer.UserId]
 	--- Linh tinh
 	local Time = os.date('!*t', OSTime);
 	plr = game:GetService("Players").LocalPlayer
@@ -208,7 +209,7 @@ function webhook()
 					  ["content"] = "@admin",
 					  ["embeds"] = {
 						{
-						  ["description"]= "\n```ini\nTên : ||**"..game:GetService("Players").LocalPlayer.Name.."**||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
+						  ["description"]= "\n```ini\nTên : ||**"..game:GetService("Players").LocalPlayer.Name.."**||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
 						  ["color"] = 9124924,
 						  ["fields"] = {
 							{
@@ -238,7 +239,7 @@ function webhook()
         local porn = game:GetService("HttpService"):JSONEncode(data)
         local headers = {["content-type"] = "application/json"}
         local request = http_request or request or HttpPost or syn.request or http.request
-        local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+        local sex = {Url = url, Body = porn, Method = "POST", Headers = headers}
         warn("Sending webhook notification...")
 		print("ruuunnnnnnn")
         request(sex)
