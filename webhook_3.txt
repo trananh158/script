@@ -78,6 +78,7 @@ end
 
 ---------------------webhook----------------------------------
 function webhook()
+	local url = ""
 	if data_webhook[game:GetService("Players").LocalPlayer.UserId] ~= nil then
 		url = data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)]
 	--- Linh tinh
