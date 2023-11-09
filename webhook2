@@ -24,7 +24,7 @@ end
 --- check keo
 local CandiesOld = 0
 if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies.Value") then
-    CandiesOld = game.Players.LocalPlayer._stats._resourceCandies.Value.Value
+    CandiesOld = game.Players.LocalPlayer._stats._resourceCandies.Value
 end
 --------------------------------------------
 ------------item drop result----------------
@@ -234,7 +234,7 @@ function webhook()
 							},
 							{
 							  ["name"]= "Kết quả :",
-							  ["value"]= "```ini\n"..gold.." gold \n"..gems.."gem\n"..xp[1].."xp\n+"..tostring(CandiesOld).."Canide\nItem :\n"..TextDropLabel.."\n```"
+							  ["value"]= "```ini\n"..gold.." gold \n"..gems.."gem\n"..xp[1].."xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).."Canide\nItem :\n"..TextDropLabel.."\n```"
 							}
 						  },
 						  ["author"]= {
