@@ -80,6 +80,8 @@ end
 function webhook()
 	url_webhook = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG"
 	if data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)] ~= nil then
+		warn(tostring(game:GetService("Players").LocalPlayer.UserId))
+		warn(data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)])
 		url_webhook = data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)]
 	end
 	
