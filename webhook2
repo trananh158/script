@@ -5,8 +5,9 @@ local data_webhook ={
 	["1084652802"] = "https://discord.com/api/webhooks/1165887570945781821/UV0ix3mEAtkM5LqtiiBVgDa_KZ4Eo_rq2gfoQD_gEjJmuTQ_hBEJdJMW1b2qKK8YheXq",
 	["1426708692"] = "https://discord.com/api/webhooks/1147076687226486855/yhfnRyx4AXEOlqH74BhO8VYWnsO1nCO5h1o3PvhMZjqdH1GtyyxT-yd6tHSQixqUG70Z",
 	["1422506306"] = "https://discord.com/api/webhooks/1153950150960623617/1dAF8MuHBNJD6ZNFPfUojXLo5rV8uqQb7e0Z6wT4BM-OyU9bFKZm0snmHc_8xc4r48jx",
-	["4056046798"] = "https://discord.com/api/webhooks/1162025851471286384/adVIo8lXdqPZJ28tsHeFm8F2fhDSf332SxoyVZfMcsamwONZjtOT9o3Iy4OLFrPtjo2y"
-	
+	["4056046798"] = "https://discord.com/api/webhooks/1162025851471286384/adVIo8lXdqPZJ28tsHeFm8F2fhDSf332SxoyVZfMcsamwONZjtOT9o3Iy4OLFrPtjo2y",
+	["4540229340"] = "https://discord.com/api/webhooks/1163024453614190643/f0lLDq8Ob0tsrKb0sEWvmujsFyUTFmpPeOv0AAtCE5u9o0eeLAw0aiiuPCCOTH90XLvo",
+	["3910107478"] = "https://discord.com/api/webhooks/1163024694019096628/Zy1tLE1-iwfscqdzCQJ2b3XRQkbmuZnAS6VRn-63lB8qY2dk787OcVv2gy5lyapsPUu7"
 }
 print("GOooooooooooooooo")
 local HttpService = game:GetService("HttpService")
