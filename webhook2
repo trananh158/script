@@ -1,5 +1,5 @@
 local data_webhook ={
-	["4961859806"] = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG",
+	["4961859806"] = "https://discord.com/api/webhooks/1172014796686774403/Zk_Z6Z6lfexzZYX_1gGc_F5D68f4FHAVGWnQEbNqin238o0bb8mobRxxNIO1NDYV7LE4",
 	["4651686048"] = "https://discord.com/api/webhooks/1172012098453250098/aUySW_ZZlxs672grCY_zS1-EM13xtUQs1A-CJgGo0zpCC_khodOf41OyVASDNY-hL2XX"
 }
 print("GOooooooooooooooo")
