@@ -110,7 +110,7 @@ function webhook()
                 --if v['item_id'] == Settings.SelectedSellPortals then
                 --if v["_unique_item_data"]["_unique_portal_data"]["portal_depth"] == Settings.SelectedSellTier then
 
-                    --PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
+                    PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
 
                 --end
             end
@@ -225,7 +225,7 @@ function webhook()
 					  ["content"] = "@admin",
 					  ["embeds"] = {
 						{
-						  ["description"]= "\n```ini\nTên : ||"..game:GetService("Players").LocalPlayer.Name.."||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
+						  ["description"]= "\n```Tên : ||"..game:GetService("Players").LocalPlayer.Name.."||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
 						  ["color"] = 9124924,
 						  ["fields"] = {
 							{
@@ -234,7 +234,7 @@ function webhook()
 							},
 							{
 							  ["name"]= "Kết quả :",
-							  ["value"]= "```ini\n"..gold.." gold \n"..gems.."gem\n"..xp[1].."xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).."Canide\nItem :\n"..TextDropLabel.."\n```"
+							  ["value"]= "```ini\n"..gold.." gold 		💼Invetory portal : "..PortalsDiff.."\n"..gems.." gem\n"..xp[1].." xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).." Canide🍬\nItem :\n"..TextDropLabel.."\n```"
 							}
 						  },
 						  ["author"]= {
