@@ -233,7 +233,7 @@ function webhook()
 							},
 							{
 							  ["name"]= "Kết quả :",
-							  ["value"]= "```ini\n"..gold.." gold \n"..gems.."gem\n"..xp[1].."xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).."Canide\nItem :\n"..TextDropLabel.."\n```"
+							  ["value"]= "```ini\n"..gold.." gold \n"..gems.."gem\n"..xp[1].."xp\n+"..tostring(CandiesOld).."Canide\nItem :\n"..TextDropLabel.."\n```"
 							}
 						  },
 						  ["author"]= {
