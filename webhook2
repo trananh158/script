@@ -82,7 +82,7 @@ function webhook()
 	if data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)] ~= nil then
 		warn(tostring(game:GetService("Players").LocalPlayer.UserId))
 		warn(data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)])
-		url_webhook = data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)]
+		url_webhook = tostring(data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)])
 	end
 	
 	--- Linh tinh
