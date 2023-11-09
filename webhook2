@@ -221,7 +221,7 @@ function webhook()
 		TextDropLabel = "Not Have Items Drops"
 	end
 
-
+	candis_re = game.Players.LocalPlayer._stats._resourceCandies.Value - CandiesOld
 	local data = {
 					  ["content"] = "@admin",
 					  ["embeds"] = {
@@ -235,7 +235,7 @@ function webhook()
 							},
 							{
 							  ["name"]= "Kết quả :",
-							  ["value"]= "```ini\n"..gold.." gold 		💼portal : \n"..gems.." gem\n"..xp[1].." xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).." Canide🍬\nItem :\n"..TextDropLabel.."\n```"
+							  ["value"]= "```ini\n"..gold.." gold 		💼portal : \n"..gems.." gem\n"..xp[1].." xp\n+"..tostring(candis_re).." Canide🍬\nItem :\n"..TextDropLabel.."\n```"
 							}
 						  },
 						  ["author"]= {
