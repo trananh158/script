@@ -1,5 +1,5 @@
 local data_webhook ={
-	["4616814936"] = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG"
+	["4961859806"] = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG"
 }
 print("GOooooooooooooooo")
 local HttpService = game:GetService("HttpService")
@@ -77,7 +77,11 @@ end
 
 ---------------------webhook----------------------------------
 function webhook()
-
+	url_webhook = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG"
+	if data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)] ~= nil then
+		url_webhook = data_webhook[tostring(game:GetService("Players").LocalPlayer.UserId)]
+	end
+	
 	--- Linh tinh
 	local Time = os.date('!*t', OSTime);
 	plr = game:GetService("Players").LocalPlayer
@@ -238,7 +242,7 @@ function webhook()
         local porn = game:GetService("HttpService"):JSONEncode(data)
         local headers = {["content-type"] = "application/json"}
         local request = http_request or request or HttpPost or syn.request or http.request
-        local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+        local sex = {Url = url_webhook, Body = porn, Method = "POST", Headers = headers}
         warn("Sending webhook notification...")
 		print("ruuunnnnnnn")
         request(sex)
