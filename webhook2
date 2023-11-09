@@ -110,7 +110,7 @@ function webhook()
                 --if v['item_id'] == Settings.SelectedSellPortals then
                 --if v["_unique_item_data"]["_unique_portal_data"]["portal_depth"] == Settings.SelectedSellTier then
 
-                    PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
+                    --PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
 
                 --end
             end
@@ -234,7 +234,7 @@ function webhook()
 							},
 							{
 							  ["name"]= "Kết quả :",
-							  ["value"]= "```ini\n"..gold.." gold 		💼Invetory portal : "..PortalsDiff.."\n"..gems.." gem\n"..xp[1].." xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).." Canide🍬\nItem :\n"..TextDropLabel.."\n```"
+							  ["value"]= "```ini\n"..gold.." gold 		💼portal : \n"..gems.." gem\n"..xp[1].." xp\n+"..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value-CandiesOld).." Canide🍬\nItem :\n"..TextDropLabel.."\n```"
 							}
 						  },
 						  ["author"]= {
@@ -260,8 +260,8 @@ function webhook()
 		print("ruuunnnnnnn")
         request(sex)
 end
-wait(10)
-webhook()
+--wait(10)
+--webhook()
 
 coroutine.resume(coroutine.create(function()
     task.spawn(function()
