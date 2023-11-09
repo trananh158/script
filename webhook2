@@ -105,7 +105,7 @@ function webhook()
                 --if v['item_id'] == Settings.SelectedSellPortals then
                 --if v["_unique_item_data"]["_unique_portal_data"]["portal_depth"] == Settings.SelectedSellTier then
 
-                    PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
+                    --PortalsDiff = v["_unique_item_data"]["_unique_portal_data"]["difficulty_scale"]
 
                 --end
             end
