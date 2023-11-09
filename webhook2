@@ -22,6 +22,7 @@ function get_inventory_items_unique_items()
 	return ItemInventoryServiceClient["session"]['inventory']['inventory_profile_data']['unique_items']
 end
 --- check keo
+local CandiesOld = 0
 if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies.Value") then
     CandiesOld = game.Players.LocalPlayer._stats._resourceCandies.Value.Value
 end
