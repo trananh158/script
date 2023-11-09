@@ -1,5 +1,6 @@
 local data_webhook ={
-	["4961859806"] = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG"
+	["4961859806"] = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG",
+	["4651686048"] = "https://discord.com/api/webhooks/1172012098453250098/aUySW_ZZlxs672grCY_zS1-EM13xtUQs1A-CJgGo0zpCC_khodOf41OyVASDNY-hL2XX"
 }
 print("GOooooooooooooooo")
 local HttpService = game:GetService("HttpService")
@@ -212,7 +213,7 @@ function webhook()
 					  ["content"] = "@admin",
 					  ["embeds"] = {
 						{
-						  ["description"]= "\n```ini\nTên : ||**"..game:GetService("Players").LocalPlayer.Name.."**||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
+						  ["description"]= "\n```ini\nTên : ||**"..game:GetService("Players").LocalPlayer.Name.."**||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
 						  ["color"] = 9124924,
 						  ["fields"] = {
 							{
