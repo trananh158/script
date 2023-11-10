@@ -224,7 +224,6 @@ function webhook()
 
 	candis_re = game.Players.LocalPlayer._stats._resourceCandies.Value - CandiesOld
 	local data={
-		{
 		  ["content"] = "@admin",
 		  ["embeds"] = {
 			{
@@ -257,7 +256,6 @@ function webhook()
 			  ["timestamp"] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec)
 			}
 		  }
-		}
 	}
 
         local porn = game:GetService("HttpService"):JSONEncode(data)
