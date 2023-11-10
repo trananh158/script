@@ -134,7 +134,28 @@ function webhook()
 	MapDiff2 = game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Holder.Difficulty.Text
 	MapDiff3 = MapDiff2
 	if GetLevelData.name == "Summer Hunt" then MapDiff3 = " [ Default ] Is a Portal " end
+	
+	-- portal tier Changed
+	local v5 = require(game.ReplicatedStorage.src.Loader)
+	local poratltierS = v5.LevelData._portal_depth
+	if poratltierS == nil then poratltierS = " Not a Portal " end
 
+	local v5 = require(game.ReplicatedStorage.src.Loader)
+	local poratChallengeS = v5.LevelData._challenge
+	if poratChallengeS == nil then poratChallengeS = " Not a Portal " end
+	if poratChallengeS == "double_cost" then poratChallengeS = "High Cost" end
+	if poratChallengeS == "short_range" then poratChallengeS = "Short Range" end
+	if poratChallengeS == "fast_enemies" then poratChallengeS = "Fast Enemies" end
+	if poratChallengeS == "regen_enemies" then poratChallengeS = "Regen Enemies" end
+	if poratChallengeS == "tank_enemies" then poratChallengeS = "Tank Enemies" end
+	if poratChallengeS == "shield_enemies" then poratChallengeS = "Shield Enemies" end
+	if poratChallengeS == "triple_cost" then poratChallengeS = "Triple Cost" end
+	if poratChallengeS == "hyper_regen_enemies" then poratChallengeS = "Hyper-Regen Enemies" end
+	if poratChallengeS == "hyper_shield_enemies" then poratChallengeS = "Steel-Plated Enemies" end
+	if poratChallengeS == "godspeed_enemies" then poratChallengeS = "Godspeed Enemies" end
+	if poratChallengeS == "flying_enemies" then poratChallengeS = "Flying Enemies" end
+	if poratChallengeS == "mini_range" then poratChallengeS = "Mini-Range" end
+	
 	--- Thời gian & số wave (ttime[2]  waves[2])
 
 	cwaves = game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Holder.Middle.WavesCompleted.Text
@@ -246,7 +267,7 @@ function webhook()
 				},
 				{
 				  ["name"] = "Kết quả",
-				  ["value"] = result.."\n"..tostring(MapsNameTEST).."\n"..tostring(poratltierS).."\n"..tostring(MapDiff3).."\n"..tostring(poratChallengeS)
+				  ["value"] = result.."\n"..tostring(MapsNameTEST).."\n"..tostring(poratltierS).."-"..tostring(poratChallengeS)"\nWave:"..tostring(waves[2]).."("..tostring(ttime[2])..")"
 				}
 			  },
 			  ["footer"] = {
@@ -266,8 +287,8 @@ function webhook()
 		print("ruuunnnnnnn")
         request(sex)
 end
-wait(10)
-webhook()
+--wait(10)
+--webhook()
 
 coroutine.resume(coroutine.create(function()
     task.spawn(function()
@@ -278,7 +299,6 @@ coroutine.resume(coroutine.create(function()
                 repeat task.wait() until  game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Enabled == true
                 pcall(function() webhook() end)
                 warn("Wait next or leave")
-                task.wait(1.5)
 			end
 		end)
 	end)
