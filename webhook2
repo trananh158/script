@@ -25,7 +25,7 @@ function get_inventory_items_unique_items()
 end
 --- check keo
 local CandiesOld = 0
-if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies.Value") then
+if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies") then
     CandiesOld = game.Players.LocalPlayer._stats._resourceCandies.Value
 end
 --------------------------------------------
@@ -223,36 +223,42 @@ function webhook()
 	end
 
 	candis_re = game.Players.LocalPlayer._stats._resourceCandies.Value - CandiesOld
-	local data = {
-					  ["content"] = "@admin",
-					  ["embeds"] = {
-						{
-						  ["description"]= "\n```Tên : ||"..game:GetService("Players").LocalPlayer.Name.."||\nLevel : "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\n💎 Gem : "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).. "\n🎃 Kẹo : "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).." \n💰 Gold : "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).. "\n🎫Cấp bp : "..tostring(game.Players.LocalPlayer._stats.base_level.Value).." lv\n```",
-						  ["color"] = 9124924,
-						  ["fields"] = {
-							{
-							  ["name"] = "Map :",
-							  ["value"] = "```ini\n🌏Map : "..world.." \n🎚Độ khó : "..tostring(MapDiff3).. "\nKết quả : "..result.."\nWave : "..tostring(waves[2]).."\nTime : "..tostring(ttime[2]).." ⌛\n```"
-							},
-							{
-							  ["name"]= "Kết quả :",
-							  ["value"]= "```ini\n"..gold.." gold 		💼portal : \n"..gems.." gem\n"..xp[1].." xp\n+"..tostring(candis_re).." Canide🍬\nItem :\n"..TextDropLabel.."\n```"
-							}
-						  },
-						  ["author"]= {
-							["name"]= "Loan Kitru hub"
-						  },
-						  ["footer"]= {
-							["text"]= "Discord Loan Kitru",
-							["icon_url"]= "https://cdn.discordapp.com/avatars/581434795813371913/0cccae82397f24c0323d7046333d9f8e.webp?size=128"
-						  },
-						  ["timestamp"]= string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec),
-						  ["thumbnail"]= {
-							["url"]= thumbnails_avatar.data[1].imageUrl
-						  }
-						}
-					  }
-					}
+	local data={
+		{
+		  ["content"] = "@admin",
+		  ["embeds"] = {
+			{
+			  ["title"] = "Loan Kitru hub",
+			  ["color"] = 9424774,
+			  ["fields"] = {
+				{
+				  ["name"] = "Thông tin",
+				  ["value"] = "Tên : "..game:GetService("Players").LocalPlayer.Name.."\nLevel: "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\nPortal còn:"
+				},
+				{
+				  ["name"] = "Thống kê",
+				  ["value"] = "**💎 "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).."\n💰 "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).."$\n🍬 "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).."**",
+				  ["inline"] = true
+				},
+				{
+				  ["name"] = "Phần thưởng",
+				  ["value"] = "+ "..candis_re.."Candy\n"..TextDropLabel,
+				  ["inline"] = true
+				},
+				{
+				  ["name"] = "Kết quả",
+				  ["value"] = result.."\n"..tostring(MapsNameTEST).."\n"..tostring(poratltierS).."\n"..tostring(MapDiff3).."\n"..tostring(poratChallengeS)
+				}
+			  },
+			  ["footer"] = {
+				["text"] = "Discord Loan Kitru",
+				["icon_url"] = "https://cdn.discordapp.com/avatars/581434795813371913/0cccae82397f24c0323d7046333d9f8e.webp?size=128"
+			  },
+			  ["timestamp"] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec)
+			}
+		  }
+		}
+	}
 
         local porn = game:GetService("HttpService"):JSONEncode(data)
         local headers = {["content-type"] = "application/json"}
@@ -262,8 +268,8 @@ function webhook()
 		print("ruuunnnnnnn")
         request(sex)
 end
---wait(10)
---webhook()
+wait(10)
+webhook()
 
 coroutine.resume(coroutine.create(function()
     task.spawn(function()
