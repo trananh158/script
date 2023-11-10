@@ -252,7 +252,7 @@ function webhook()
 			  },
 			  ["footer"] = {
 				["text"] = "Discord Loan Kitru",
-				[icon_url"] = "https://cdn.discordapp.com/avatars/581434795813371913/0cccae82397f24c0323d7046333d9f8e.webp?size=128"
+				["icon_url"] = "https://cdn.discordapp.com/avatars/581434795813371913/0cccae82397f24c0323d7046333d9f8e.webp?size=128"
 			  },
 			  ["timestamp"] = string.format('%d-%d-%dT%02d:%02d:%02dZ', Time.year, Time.month, Time.day, Time.hour, Time.min, Time.sec)
 			}
