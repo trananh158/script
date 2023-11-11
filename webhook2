@@ -24,6 +24,18 @@ local ItemInventoryServiceClient = v5.load_client_service(script, "ItemInventory
 function get_inventory_items_unique_items()
 	return ItemInventoryServiceClient["session"]['inventory']['inventory_profile_data']['unique_items']
 end
+-- Hien , trong value
+function comma_value(p1)
+	local value = p1;
+	while true do
+		local value2, value3 = string.gsub(value, "^(-?%d+)(%d%d%d)", "%1,%2");
+		value = value2;
+		if value3 ~= 0 then else
+			break;
+		end;
+	end;
+	return value;
+end;
 --- check keo
 local CandiesOld = 0
 if game.Players.LocalPlayer._stats:FindFirstChild("_resourceCandies") then
@@ -258,12 +270,12 @@ function webhook()
 				},
 				{
 				  ["name"] = "Thống kê",
-				  ["value"] = "**💎 "..tostring(game.Players.LocalPlayer._stats.gem_amount.Value).."\n💰 "..tostring(game.Players.LocalPlayer._stats.gold_amount.Value).."$\n🍬 "..tostring(game.Players.LocalPlayer._stats._resourceCandies.Value).."**",
+				  ["value"] = "**💎 "..tostring(comma_value(game.Players.LocalPlayer._stats.gem_amount.Value)).."\n💰 "..tostring(comma_value(game.Players.LocalPlayer._stats.gold_amount.Value)).."$\n🍬 "..tostring(comma_value(game.Players.LocalPlayer._stats._resourceCandies.Value)).."**",
 				  ["inline"] = true
 				},
 				{
 				  ["name"] = "Phần thưởng",
-				  ["value"] = "+ "..candis_re.." Candy\n"..TextDropLabel,
+				  ["value"] = "+ "..tostring(comma_value(candis_re)).." Candy\n"..TextDropLabel,
 				  ["inline"] = true
 				},
 				{
