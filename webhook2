@@ -263,7 +263,7 @@ function webhook()
 				},
 				{
 				  ["name"] = "Phần thưởng",
-				  ["value"] = "+ "..candis_re.."Candy\n"..TextDropLabel,
+				  ["value"] = "+ "..candis_re.." Candy\n"..TextDropLabel,
 				  ["inline"] = true
 				},
 				{
