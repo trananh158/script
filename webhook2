@@ -257,12 +257,19 @@ function webhook()
 	--end
 
 	if TextDropLabel == "" then
-		TextDropLabel = "Not Have Items Drops"
+		TextDropLabel = "không có đồ rơi"
+	end
+	text_tag = ""
+	item_secret = {"zid"}
+	for k,v23 in pairs(item_secret) do
+	  if string.find(TextDropLabel,v23) != nil then
+		text_tag = "@everyone, bạn đã nhận được "..v23
+	  end
 	end
 
 	candis_re = game.Players.LocalPlayer._stats._resourceCandies.Value - CandiesOld
 	local data={
-		  ["content"] = "@admin",
+		  ["content"] = text_tag,
 		  ["embeds"] = {
 			{
 			  ["title"] = "Loan Kitru hub",
@@ -270,7 +277,7 @@ function webhook()
 			  ["fields"] = {
 				{
 				  ["name"] = "Thông tin",
-				  ["value"] = "Tên : "..game:GetService("Players").LocalPlayer.Name.."\nLevel: "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\nPortal còn:"
+				  ["value"] = "Tên : ||"..game:GetService("Players").LocalPlayer.Name.."||\nLevel: "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\nPortal còn:"
 				},
 				{
 				  ["name"] = "Thống kê",
