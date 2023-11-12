@@ -262,7 +262,7 @@ function webhook()
 	text_tag = ""
 	item_secret = {"zid"}
 	for k,v23 in pairs(item_secret) do
-	  if string.find(TextDropLabel,v23) != nil then
+	  if string.find(TextDropLabel,v23) ~= nil then
 		text_tag = "@everyone, bạn đã nhận được "..v23
 	  end
 	end
