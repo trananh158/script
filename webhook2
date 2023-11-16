@@ -253,7 +253,7 @@ function webhook()
 				end
 				CountAmount = CountAmount + 1
 			else
-				TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " : x" .. tostring(v['Count'] - Table_All_Items_Old_data[i]['Count']) .. "("..v['Count']..")\n"
+				TextDropLabel = TextDropLabel .. tostring(CountAmount) .. ". " .. tostring(v['Name']) .. " : x" .. tostring(v['Count'] - Table_All_Items_Old_data[i]['Count']) .. " (số lượng : "..v['Count']..")\n"
 				CountAmount = CountAmount + 1
 			end
 		end
@@ -264,7 +264,7 @@ function webhook()
 		TextDropLabel = "không có đồ rơi"
 	end
 	text_tag = ""
-	item_secret = {"Zid"}
+	item_secret = {"Zid","Detective Shard"}
 	for k,v23 in pairs(item_secret) do
 	  if string.find(TextDropLabel,v23) ~= nil then
 		text_tag = "@everyone, bạn đã nhận được "..v23
