@@ -336,4 +336,13 @@ end))
 --[[
 	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
 ]]
+local fi1 = game:GetService("UserInputService")
+fi1.InputBegan:Connect(function(input)
+	if input.KeyCode == Enum.KeyCode.B then
+		local args = {
+    			[1] = "_lobbytemplate_event321"
+		}
+		game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(unpack(args))
+	end
+end)
 
