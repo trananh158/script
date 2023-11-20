@@ -282,7 +282,7 @@ function webhook()
 			  ["fields"] = {
 				{
 				  ["name"] = "Thông tin",
-				  ["value"] = "Tên : ||"..game:GetService("Players").LocalPlayer.Name.."||\nLevel: "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\nPortal còn:"
+				  ["value"] = "Tên : ||"..game:GetService("Players").LocalPlayer.Name.."||\nLevel: "..tostring(game.Players.LocalPlayer.PlayerGui.spawn_units.Lives.Main.Desc.Level.Text).."\nPortal còn: "..tostring(Count_Portal_list).." 🌀"
 				},
 				{
 				  ["name"] = "Thống kê",
@@ -333,17 +333,4 @@ coroutine.resume(coroutine.create(function()
 	end)
 end))
 
---- BOOST FPS
---[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
-local fi1 = game:GetService("UserInputService")
-fi1.InputBegan:Connect(function(input)
-	if input.KeyCode == Enum.KeyCode.B then
-		local args = {
-    			[1] = "_lobbytemplate_event321"
-		}
-		game:GetService("ReplicatedStorage").endpoints.client_to_server.request_join_lobby:InvokeServer(unpack(args))
-	end
-end)
 
