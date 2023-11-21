@@ -274,7 +274,7 @@ function webhook()
 	end
 
 	candis_re = game.Players.LocalPlayer._stats._resourceCandies.Value - CandiesOld
-	if candis_re > 0 then const_drop = const_drop.."+"..candis_re.." Candy"end 
+	if candis_re > 0 then const_drop = const_drop.."+"..candis_re.." Candy" end 
 	local data={
 		  ["content"] = text_tag,
 		  ["embeds"] = {
