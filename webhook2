@@ -193,15 +193,15 @@ function webhook()
 	print(waves)
 
 	--- Gem re + gold re + xp
-
+	const_drop = ""
 	gold = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GoldReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
-	if gold == "+99999" then gold = "+0" end	    
+	if gold ~= "+99999" then const_drop = const_drop.."+"..gold.." Gold\n" end	    
 	gems = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GemReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
-	if gems == "+99999" then gems = "+0" end	 
+	if gems ~= "+99999" then const_drop = const_drop.."+"..gems.." Gems\n" end	 
 
 	xpx = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("XPReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
 	xp = xpx:split(" ")
-	if xp[1] == "+99999" then xp[1] = "+0" end
+	if xp[1] ~= "+99999" then const_drop = const_drop.."+"..xp[1].." Xp\n" end
 
 	--- Item drop
 	local TextDropLabel = ""
@@ -266,7 +266,7 @@ function webhook()
 		TextDropLabel = "không có đồ rơi"
 	end
 	text_tag = ""
-	item_secret = {"Zid","Detective Shard"}
+	item_secret = {"Zid","Detective Shard","Path Portal"}
 	for k,v23 in pairs(item_secret) do
 	  if string.find(TextDropLabel,v23) ~= nil then
 		text_tag = "@everyone, bạn đã nhận được "..v23
@@ -274,6 +274,7 @@ function webhook()
 	end
 
 	candis_re = game.Players.LocalPlayer._stats._resourceCandies.Value - CandiesOld
+	if candis_re > 0 then const_drop = const_drop.."+"..candis_re.." Candy"
 	local data={
 		  ["content"] = text_tag,
 		  ["embeds"] = {
@@ -292,7 +293,7 @@ function webhook()
 				},
 				{
 				  ["name"] = "Phần thưởng",
-				  ["value"] = "+ "..tostring(comma_value(candis_re)).." Candy\n"..TextDropLabel,
+				  ["value"] = const_drop.."\n"..TextDropLabel,
 				  ["inline"] = true
 				},
 				{
