@@ -16,6 +16,8 @@ local data_webhook ={
 	["3761394528"] = "https://discord.com/api/webhooks/1164459977147174952/VkFVLuD_yErgrlwZa4ick7y5Z2l3WEeaKIIG3lmnDw-ysb8kxuxF_MAaqMvjU1tN9pFB",
 	["474851701"] = "https://discord.com/api/webhooks/1155690902556246036/-Z8iOIirPksMA3udnFkPc0tiyk3pAtLOfSX5HwVKOCZh11UEf3ixZwBHiRlDt2tGWK2t",
         ["1736283822"] = "https://discord.com/api/webhooks/1155081065547960432/GV3YlakPNr0joV_F_9X5-3YZs7NwLntS57XXBKYG3Oj19KK2Wwajqnqq0vxWmjI7quJs",
+        ["980257840"] = "https://discord.com/api/webhooks/1176516852395036713/-KZiJBblHhCwbH_tTHBN0PRP2sAr9rG0Sl-pq509j-iVlQfR5SVUfnhvZIhXd1XF4r2B",
+        ["2972754321"] = "https://discord.com/api/webhooks/1176517162962276394/xNVYt3bsR3J695b3OFzJs5xP18Ktt3i1QLJ0_6f1XIs6Jtsmm0QFcZ14e5PbGlGOBH0I",
 }
 print("GOooooooooooooooo")
 local HttpService = game:GetService("HttpService")
