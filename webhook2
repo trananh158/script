@@ -338,3 +338,9 @@ coroutine.resume(coroutine.create(function()
 end))
 
 
+-- ATUO RECONTECTION WEN DISCONNETC
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+wait (5) game:GetService("TeleportService"):Teleport(8304191830)
+    end);
+
+
