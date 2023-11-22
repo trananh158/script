@@ -197,13 +197,13 @@ function webhook()
 	--- Gem re + gold re + xp
 	const_drop = ""
 	gold = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GoldReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
-	if gold ~= "+99999" then const_drop = const_drop.."+"..gold.." Gold\n" end	    
+	if gold ~= "+99999" then const_drop = const_drop..gold.." Gold\n" end	    
 	gems = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("GemReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
-	if gems ~= "+99999" then const_drop = const_drop.."+"..gems.." Gems\n" end	 
+	if gems ~= "+99999" then const_drop = const_drop..gems.." Gems\n" end	 
 
 	xpx = ResultHolder:FindFirstChild("LevelRewards"):FindFirstChild("ScrollingFrame"):FindFirstChild("XPReward"):FindFirstChild("Main"):FindFirstChild("Amount").Text
 	xp = xpx:split(" ")
-	if xp[1] ~= "+99999" then const_drop = const_drop.."+"..xp[1].." Xp\n" end
+	if xp[1] ~= "+99999" then const_drop = const_drop..xp[1].." Xp\n" end
 
 	--- Item drop
 	local TextDropLabel = ""
@@ -295,7 +295,7 @@ function webhook()
 				},
 				{
 				  ["name"] = "Phần thưởng",
-				  ["value"] = const_drop.."\n"..TextDropLabel,
+				  ["value"] = const_drop..TextDropLabel,
 				  ["inline"] = true
 				},
 				{
