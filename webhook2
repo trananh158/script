@@ -25,7 +25,7 @@ local data_webhook ={
 	["718583337"] = "https://discord.com/api/webhooks/1178251334546378752/0QCXkimp8NkcWpUsmFNq2lmhncmZUl52vt3wuCCS5f5YCAkQhtEXEQOMjBdS4m_6a5rA",
 	["1717039300"] = "https://discord.com/api/webhooks/1163437749274157097/FTB7PZ-uni8GGN1N6VEKYwzXja8W4zWdjlpJmq28kMqIh2rW8K94vDM3WmGBzb8bnpfM",
 	["4905276353"]="https://discord.com/api/webhooks/1180516792574160946/Fgb4kERqLxl0aEUDQ8_vpDZYPxEeVkQ6Nb7_ygxLI1Bbgjp3iZayLs15vEtKZdKtPmPJ",
-	["5219250450"]="https://discord.com/api/webhooks/1181103895213244488/CMcELbgPbePnMFJvomghg7U60isegep7ji7_5CLnDBAiSiUtKE9t1pHuvtMDDj1CCZgL"
+	["5219250450"]="https://discord.com/api/webhooks/1181103895213244488/CMcELbgPbePnMFJvomghg7U60isegep7ji7_5CLnDBAiSiUtKE9t1pHuvtMDDj1CCZgL",
 	["4531880933"] = "https://discord.com/api/webhooks/1181140233996222524/T6ymtcOIv90SQgqlbSkLQ2dlgCWrOcJl-37CiXa6HcKLEKjbr7p71cHpDzv_W6RhKl3v"
 }
 print("GOooooooooooooooo")
