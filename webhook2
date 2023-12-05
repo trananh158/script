@@ -1,3 +1,20 @@
+--- setfpa
+local RunService = game:GetService("RunService")
+
+local TARGET_FRAME_RATE = 10
+
+local frameStart = os.clock()
+
+RunService.PreSimulation:Connect(function()
+    while os.clock() - frameStart < 1 / TARGET_FRAME_RATE do
+        -- We do nothing until the target time has elapsed
+    end
+
+    -- Mark the start of the next frame right before this one is rendered
+    frameStart = os.clock()
+end)
+
+
 repeat task.wait(5) until game:IsLoaded()
 local data_webhook ={
 	["4961859806"] = "https://discord.com/api/webhooks/1172014796686774403/Zk_Z6Z6lfexzZYX_1gGc_F5D68f4FHAVGWnQEbNqin238o0bb8mobRxxNIO1NDYV7LE4",
