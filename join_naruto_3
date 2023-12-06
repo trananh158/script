@@ -1,0 +1,15 @@
+
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+wait (5) game:GetService("TeleportService"):Teleport(8304191830)
+    end);
+
+repeat task.wait(5) until game:IsLoaded()
+
+local args = {
+    [1] = "amegakure_legend_3"
+}
+if game.PlaceId == 8304191830 then
+    game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
+end
+    pcall(function() syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_3'))()")
+    end)
