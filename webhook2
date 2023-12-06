@@ -294,7 +294,7 @@ function webhook()
 		TextDropLabel = "không có đồ rơi"
 	end
 	text_tag = ""
-	item_secret = {"Zid","Detective Shard","Path Portal"}
+	item_secret = {"Zid","Detective Shard","Path Portal","Golden Portal"}
 	for k,v23 in pairs(item_secret) do
 	  if string.find(TextDropLabel,v23) ~= nil then
 		text_tag = "@everyone, bạn đã nhận được "..v23
