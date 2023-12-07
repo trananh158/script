@@ -16,7 +16,7 @@ end
         local exec = tostring(identifyexecutor())
         if exec == "Synapse X" then
             syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_hallow'))()")
-        elseif exec ~= "Synapse X" then
+        elseif exec == "Fluxus" then
             queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_hallow'))()")
         elseif exec ~= "Synapse X" then
             syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_hallow'))()")
