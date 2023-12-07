@@ -12,6 +12,8 @@ local args = {
 if game.PlaceId == 8304191830 then
     game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
 end
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_hallow'))()")
+--[[
     pcall(function()
         local exec = tostring(identifyexecutor())
         if exec == "Synapse X" then
@@ -22,3 +24,4 @@ end
             syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_hallow'))()")
         end
     end)
+]]
