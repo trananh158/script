@@ -1,7 +1,7 @@
 repeat task.wait(5) until game:IsLoaded()
 
 local args = {
-    [1] = "amegakure_legend_3"
+    [1] = "halloween2_event"
 }
 if game.PlaceId == 8304191830 then
     game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
