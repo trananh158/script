@@ -349,13 +349,14 @@ function webhook()
 end
 --wait(10)
 --webhook()
-
+_G.check_webhook = true
 coroutine.resume(coroutine.create(function()
     task.spawn(function()
         local GameFinished = game:GetService("Workspace"):WaitForChild("_DATA"):WaitForChild("GameFinished")
         GameFinished:GetPropertyChangedSignal("Value"):Connect(function()
             print("Changed", GameFinished.Value == true)
-            if GameFinished.Value == true then
+            if GameFinished.Value == true and _G.check_webhook == true then
+		_G.check_webhook = false
                 repeat task.wait() until  game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Enabled == true
                 pcall(function() webhook() end)
                 warn("Wait next or leave")
