@@ -12,13 +12,4 @@ local args = {
 if game.PlaceId == 8304191830 then
     game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
 end
-    pcall(function()
-        local exec = tostring(identifyexecutor())
-        if exec == "Synapse X" then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_1'))()")
-        elseif exec ~= "Synapse X" then
-            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_1'))()")
-        elseif exec ~= "Synapse X" then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_1'))()")
-        end
-    end)
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_1'))()")
