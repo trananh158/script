@@ -1,0 +1,13 @@
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/raid_goku_4'))()")
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+wait (5) game:GetService("TeleportService"):Teleport(8304191830)
+    end);
+
+repeat task.wait(5) until game:IsLoaded()
+
+local args = {
+    [1] = "kai_planet_level_4"
+}
+if game.PlaceId == 8304191830 then
+    game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
+end
