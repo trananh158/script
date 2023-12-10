@@ -1,3 +1,4 @@
+queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_3'))()")
 game:GetService("GuiService").ErrorMessageChanged:Connect(function()
 wait (5) game:GetService("TeleportService"):Teleport(8304191830)
     end);
@@ -10,16 +11,3 @@ local args = {
 if game.PlaceId == 8304191830 then
     game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
 end
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_3'))()")
---[[
-    pcall(function()
-        local exec = tostring(identifyexecutor())
-        if exec == "Synapse X" then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_3'))()")
-        elseif exec == "Fluxus" then
-            queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_3'))()")
-        elseif exec == "Synapse X" then
-            syn.queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/join_naruto_3'))()")
-        end
-    end) 
-]]
