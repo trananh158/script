@@ -17,6 +17,7 @@ end)
 
 repeat task.wait(5) until game:IsLoaded()
 local data_webhook ={
+["1736283822"] = "https://discord.com/api/webhooks/1155081065547960432/GV3YlakPNr0joV_F_9X5-3YZs7NwLntS57XXBKYG3Oj19KK2Wwajqnqq0vxWmjI7quJs",
 	["4658132822"] = "https://discord.com/api/webhooks/1183029994616791161/c2evR4wuUd8SaAhMxbex9GsDk7utgJiOAILlw9zSZQMeU_EMfPxsUbiLgL7wXTSm9LqB",
 	["4316101960"]="https://discord.com/api/webhooks/1182581118172680282/kBYVXO-nYZQTJtTqjvEz6SGnxgzeBz46Zn0tx90LcQlSFDHJLCqwOWiUyl_MkJNcaC7u",
 	["3879018373"] = "https://discord.com/api/webhooks/1147076687226486855/yhfnRyx4AXEOlqH74BhO8VYWnsO1nCO5h1o3PvhMZjqdH1GtyyxT-yd6tHSQixqUG70Z",
