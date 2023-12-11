@@ -1,4 +1,7 @@
-queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/raid_goku_4'))()")
+pcall(function()
+    queue_on_teleport("loadstring(game:HttpGet('https://raw.githubusercontent.com/trananh158/script/main/raid_goku_4'))()")
+    end)
+
 game:GetService("GuiService").ErrorMessageChanged:Connect(function()
 wait (5) game:GetService("TeleportService"):Teleport(8304191830)
     end);
