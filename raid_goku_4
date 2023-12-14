@@ -6,7 +6,7 @@ game:GetService("GuiService").ErrorMessageChanged:Connect(function()
 wait (5) game:GetService("TeleportService"):Teleport(8304191830)
     end);
 
-repeat task.wait(300) until game:IsLoaded()
+repeat task.wait(10) until game:IsLoaded()
 
 local args = {
     [1] = "kai_planet_level_4"
