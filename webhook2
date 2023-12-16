@@ -343,7 +343,7 @@ function webhook()
 				},
 				{
 				  ["name"] = "Kết quả",
-				  ["value"] = result.."\n"..tostring(MapsNameTEST).." "..name.."\n"..tostring(poratltierS).."-"..tostring(poratChallengeS).."\nWave:"..tostring(waves[2]).."("..tostring(ttime[2])..")"
+				  ["value"] = result.."\n"..tostring(MapsNameTEST).."\n"..tostring(game:GetService("Players").LocalPlayer.PlayerGui.ResultsUI.Holder.LevelName.Text).."\n"..tostring(poratltierS).."-"..tostring(poratChallengeS).."\nWave:"..tostring(waves[2]).."("..tostring(ttime[2])..")"
 				}
 			  },
 			  ["footer"] = {
