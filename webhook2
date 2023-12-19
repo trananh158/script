@@ -19,7 +19,7 @@ repeat task.wait(5) until game:IsLoaded()
 local data_webhook ={
 ["khuaaoxank_2"]="https://discord.com/api/webhooks/1186615304147709973/tBXsI0pmsSs-knndm5HBcLtW6Uf4pt45svB6lIpc-vmWcYCR9IpKBB0aT07BYk1u7S38",
 ["wertuphan11110"]= "https://discord.com/api/webhooks/1182531760425287771/1k71hbo_dEpGwqlc6YgMaOqnQYnOwt5fI93H9rGMLMHpnVc63CGmjlJj4TSoAddbYgaT",
-["khuaaoxank_2"]="https://discord.com/api/webhooks/1185385392590045214/x_oM-8D7MNZm7u0RMqYE7sZKakDr-tgcvouYRu_Q2kuo_0EZhMOnqCDriqB3z97wftt-",
+["khuaaoxank_2 chu y"]="https://discord.com/api/webhooks/1185385392590045214/x_oM-8D7MNZm7u0RMqYE7sZKakDr-tgcvouYRu_Q2kuo_0EZhMOnqCDriqB3z97wftt-",
 ["BlackHereee"]="https://discord.com/api/webhooks/1185385071390244874/V9Gz59ocF-fxiC3RBQF18RasEQvgpTc0fRixHf1mi0riZ2bkhpztSW97CeQnXSbPOQfN",
 ["3910084038"]="https://discord.com/api/webhooks/1183711913478213683/iAGMU2pMDeMMqkcQOVuJvVBWRYEtH0-BDIJeuZzvXlWQUKnIrpyAUoRg972YOR6SyCpR",
 ["2287660439"]="https://discord.com/api/webhooks/1183711890778628136/KJVaAXFh75QoIggKlzU8fnHb2fi3ekXJ8S-Lfv7B8B3S4vjqvHJxJ9z4wDu-7RVOxep0",
