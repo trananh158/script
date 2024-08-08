@@ -4,7 +4,7 @@ if game.PlaceId == 17282336195 then
 print("ingame")
 
 	while true do 
-		if Workspace.PLAY.Story.Enter.Room4.Player.Value ~= 0 then
+		if Workspace.PLAY.Story.Enter.Room4.Players.Value ~= 0 then
 			print("NOT")
 		else
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Story.Enter.Room4.CFrame
