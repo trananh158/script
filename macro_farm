@@ -1,3 +1,11 @@
+task.wait(5)
+local args = {
+    [1] = "Start",
+    [2] = "Button"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
+
 while true do
 	--đặt unit farm tiền một
 
