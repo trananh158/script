@@ -1,0 +1,140 @@
+while true do
+	--đặt unit farm tiền một
+
+	local args = {
+		[1] = {
+			[1] = "bolm",
+			[2] = CFrame.new(32.84442138671875, -20.602005004882812, 71.28258514404297, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		},
+		[2] = Vector3.new(32.844017028808594, -21.890605926513672, 71.28240203857422)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	--đặt unit farm tiền 2
+
+	local args = {
+		[1] = {
+			[1] = "bolm",
+			[2] = CFrame.new(36.58446502685547, -20.571765899658203, 71.74803161621094, 1, 1.084133849360569e-08, 0, -1.084133849360569e-08, 1, -2.626462958232878e-08, 0, 2.626462958232878e-08, 1)
+		},
+		[2] = Vector3.new(36.58406066894531, -21.890413284301758, 71.74784851074219)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+	--mash 1
+
+	local args = {
+		[1] = {
+			[1] = "Mish",
+			[2] = CFrame.new(22.630611419677734, -20.602426528930664, 64.9106674194336, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		},
+		[2] = Vector3.new(22.630611419677734, -21.89099884033203, 64.91067504882812)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+	--mash 2
+
+	local args = {
+		[1] = {
+			[1] = "Mish",
+			[2] = CFrame.new(29.675403594970703, -20.56421661376953, 53.758262634277344, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		},
+		[2] = Vector3.new(29.67540168762207, -21.89112091064453, 53.75826644897461)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	--mash 3
+
+	local args = {
+		[1] = {
+			[1] = "Mish",
+			[2] = CFrame.new(29.514371871948242, -20.566856384277344, 46.80779266357422, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		},
+		[2] = Vector3.new(29.514373779296875, -21.89059829711914, 46.80779266357422)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+	--ichogo 1
+
+	local args = {
+		[1] = {
+			[1] = "Ichongo (True Bankai)",
+			[2] = CFrame.new(25.67717170715332, -20.601587295532227, 42.665550231933594, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		},
+		[2] = Vector3.new(25.677078247070312, -21.89015007019043, 42.66563415527344)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	--ichigo 2
+
+	local args = {
+		[1] = {
+			[1] = "Ichongo (True Bankai)",
+			[2] = CFrame.new(30.848413467407227, -20.602642059326172, 42.26481628417969, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+		},
+		[2] = Vector3.new(30.848318099975586, -21.89120864868164, 42.26490020751953)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	--ichigo 3
+
+	local args = {
+		[1] = {
+			[1] = "Ichongo (True Bankai)",
+			[2] = CFrame.new(35.822906494140625, -20.60264015197754, 42.03776550292969, 1, 2.1596850106070998e-24, -1.3234889800848443e-23, 2.1596850106070998e-24, 1, 0, -1.3234889800848443e-23, 0, 1)
+		},
+		[2] = Vector3.new(35.822818756103516, -21.891210556030273, 42.03784942626953)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+
+	--update
+	pcall(function()
+    local args = {
+		[1] = "Upgrade",
+		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)")
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+
+	local args = {
+		[1] = "Upgrade",
+		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish")
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+
+	local args = {
+		[1] = "Upgrade",
+		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm")
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+	end)
+	
+	
+	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then
+		
+		local args = {
+			[1] = "Return"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+	end
+	
+	task.wait(2)
+	
+
+end
