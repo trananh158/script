@@ -110,26 +110,33 @@ while true do
 
 	--update
 	pcall(function()
-    local args = {
-		[1] = "Upgrade",
-		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)")
-	}
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)") then
+		
+			local args = {
+				[1] = "Upgrade",
+				[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)")
+			}
 
-	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+		
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish") then
+			local args = {
+			[1] = "Upgrade",
+			[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish")
+			}
 
-	local args = {
-		[1] = "Upgrade",
-		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish")
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
-
-	local args = {
-		[1] = "Upgrade",
-		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm")
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm") then 
+		
+			local args = {
+			[1] = "Upgrade",
+			[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm")
+			}	
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+	
 	end)
 	
 	
