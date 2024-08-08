@@ -110,7 +110,7 @@ while true do
 
 	--update
 	pcall(function()
-		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)") ~= nil then
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("Ichongo (True Bankai)") then
 		
 			local args = {
 				[1] = "Upgrade",
@@ -120,7 +120,7 @@ while true do
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
 		
-		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish") ~= nil then
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("Mish") then
 			local args = {
 			[1] = "Upgrade",
 			[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish")
@@ -128,7 +128,7 @@ while true do
 
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
-		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm") ~= nil then 
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("bolm") then 
 		
 			local args = {
 			[1] = "Upgrade",
