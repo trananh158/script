@@ -1,0 +1,31 @@
+repeat task.wait(2) until game:IsLoaded()
+print("ingame")
+
+	while true do 
+		if Workspace.PLAY.Story.Enter.Room4.Players.Value ~= 0 then
+			print("NOT")
+		else
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Story.Enter.Room4.CFrame
+			task.wait(1)
+			keypress(0x57)
+			task.wait(1)
+			local args = {
+			[1] = "Large Village",
+			[2] = "Inf",
+			[3] = workspace:WaitForChild("PLAY"):WaitForChild("Story"):WaitForChild("Enter"):WaitForChild("Room4")
+			}
+			
+			game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("SelectionStages"):InvokeServer(unpack(args))
+			
+			task.wait(1)
+			local args = {
+			[1] = "Large Village",
+			[2] = "Inf",
+			[3] = "Nightmare",
+			[4] = "Start"
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+		  end
+		task.wait(2)
+	end
