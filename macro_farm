@@ -19,12 +19,13 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
-function disp_time(time)
-  local days = floor(time/86400)
-  local hours = floor(mod(time, 86400)/3600)
-  local minutes = floor(mod(time,3600)/60)
-  local seconds = floor(mod(time,60))
-  return format("%d:%02d:%02d:%02d",days,hours,minutes,seconds)
+function FormatTime(seconds)
+    local hours = math.floor(seconds / 3600)
+    local minutes = math.floor((seconds % 3600) / 60)
+    local secondsRemaining = seconds % 60
+
+    local formattedTime = string.format("%02d:%02d:%02d", hours, minutes, secondsRemaining)
+    return formattedTime
 end
 while true do
 	--đặt unit farm tiền một
@@ -161,18 +162,11 @@ while true do
 	
 	
 	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then
-		local  time = game:GetService("Workspace"):WaitForChild("Maingame").Time.Value
-		local days = floor(time/86400)
-		  local hours = floor(mod(time, 86400)/3600)
-		  local minutes = floor(mod(time,3600)/60)
-		  local seconds = floor(mod(time,60))
-		  endtime = format("%d:%02d:%02d:%02d",days,hours,minutes,seconds)
-
-
+		local  time1 = game:GetService("Workspace"):WaitForChild("Maingame").Time.Value
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = "Name : \n+"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Tokensget.Value.." 💎\nTime :"..endtime,
+		      ["description"] = "Name : \n+"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Tokensget.Value.." 💎\nTime :"..FormatTime(time1),
 		      ["color"] = null
 		    }}
 		}
