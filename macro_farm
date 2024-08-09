@@ -163,10 +163,11 @@ while true do
 	
 	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then
 		local  time1 = game:GetService("Workspace"):WaitForChild("Maingame").Time.Value
+		local gem1 = game:GetService("Players").LocalPlayer.Data.Tokens.Value
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = "Name : \n+"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Tokensget.Value.." 💎\nTime :"..FormatTime(time1),
+		      ["description"] = "Name : \n+"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Tokensget.Value.." 💎\nTime :"..FormatTime(time1).."\n Tổng gem: "..gem1,
 		      ["color"] = null
 		    }}
 		}
