@@ -10,6 +10,7 @@ print("ingame")
 			print("NOT")
 		else
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Story.Enter.Room4.CFrame
+			task.wait(0.5)
 			keypress(0x57)
 			task.wait(1)
 			local args = {
