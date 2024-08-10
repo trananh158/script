@@ -1,4 +1,4 @@
-local RunService = game:GetService("RunService")
+ocal RunService = game:GetService("RunService")
 
 local TARGET_FRAME_RATE = 10
 
