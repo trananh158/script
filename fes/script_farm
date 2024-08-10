@@ -1,0 +1,151 @@
+local RunService = game:GetService("RunService")
+
+local TARGET_FRAME_RATE = 10
+
+local frameStart = os.clock()
+
+RunService.PreSimulation:Connect(function()
+    while os.clock() - frameStart < 1 / TARGET_FRAME_RATE do
+        -- We do nothing until the target time has elapsed
+    end
+
+    -- Mark the start of the next frame right before this one is rendered
+    frameStart = os.clock()
+end)
+task.wait(5)
+local args = {
+    [1] = "Start",
+    [2] = "Button"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
+function FormatTime(seconds)
+    local hours = math.floor(seconds / 3600)
+    local minutes = math.floor((seconds % 3600) / 60)
+    local secondsRemaining = seconds % 60
+
+    local formattedTime = string.format("%02d:%02d:%02d", hours, minutes, secondsRemaining)
+    return formattedTime
+end
+
+if _G.macro_farm then
+print("have")
+else
+while true do
+	--đặt unit farm tiền một
+	keypress(0x45)
+	local args = {
+    [1] = {
+        [1] = "bolm",
+        [2] = CFrame.new(24.790504455566406, -20.602371215820312, 84.20608520507812, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(24.76482391357422, -21.890972137451172, 84.18130493164062)
+}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	
+	
+	local args = {
+    [1] = {
+        [1] = "Emilian",
+        [2] = CFrame.new(22.810216903686523, -20.602516174316406, 75.86872100830078, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+		[2] = Vector3.new(23.26119613647461, -20.964815139770508, 75.70857238769531)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	
+	local args = {
+    [1] = {
+        [1] = "Ichongo",
+        [2] = CFrame.new(22.676563262939453, -20.602462768554688, 56.42585372924805, 1, 0, 0, 1.9809257781948863e-16, 1, -8.728952983536975e-16, 0, 0, 1)
+    },
+    [2] = Vector3.new(22.618022918701172, -21.891069412231445, 56.410926818847656)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	
+	local args = {
+    [1] = {
+        [1] = "Ichongo (Bankai)",
+        [2] = CFrame.new(36.195648193359375, -20.60170555114746, 65.5840072631836, 1, -1.1125557065375661e-27, 0, -1.1125557065375661e-27, 1, 0, 0, 0, 1)
+    },
+		[2] = Vector3.new(36.205223083496094, -21.890270233154297, 65.56546783447266)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+
+	--update
+	pcall(function()
+		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+			local args = {
+				[1] = "Upgrade",
+				[2] = (child)
+			}
+		
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+		--[[if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("Ichongo (True Bankai)") then
+		
+			local args = {
+				[1] = "Upgrade",
+				[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)")
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+		
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("Mish") then
+			local args = {
+			[1] = "Upgrade",
+			[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish")
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+		if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("bolm") then 
+		
+			local args = {
+			[1] = "Upgrade",
+			[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm")
+			}	
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end]]--
+	
+	end)
+	
+	
+	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then
+		local  time1 = game:GetService("Workspace"):WaitForChild("Maingame").Time.Value
+		local gem1 = game:GetService("Players").LocalPlayer.Data.Tokens.Value
+		data = {
+		  ["embeds"]=
+		    {{
+		      ["description"] = "Name : \n+"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Tokensget.Value.." 💎\nTime :"..FormatTime(time1).."\n Tổng gem: "..gem1,
+		      ["color"] = null
+		    }}
+		}
+
+		local porn = game:GetService("HttpService"):JSONEncode(data)
+        	local headers = {["content-type"] = "application/json"}
+        	local request = http_request or request or HttpPost or syn.request or http.request
+        	local sex = {Url = "https://discord.com/api/webhooks/1153950496554500146/2t1HzB8vEz7YXQYD1WHu0o32HI4RaJTAMcR3USGfX6amaSQjQNiqm5Nq8rKpdRyI6Prv", Body = porn, Method = "POST", Headers = headers}
+		request(sex)
+		
+		local args = {
+			[1] = "Return"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+	end
+	
+	task.wait(2)
+	
+
+end
+end
