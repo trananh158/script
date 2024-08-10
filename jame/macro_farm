@@ -33,7 +33,7 @@ print("have")
 else
 while true do
 	--đặt unit farm tiền một
-
+	pressKey(0x45)
 	local args = {
 		[1] = {
 			[1] = "bolm",
