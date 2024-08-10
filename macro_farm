@@ -1,4 +1,4 @@
-ocal RunService = game:GetService("RunService")
+local RunService = game:GetService("RunService")
 
 local TARGET_FRAME_RATE = 10
 
@@ -29,7 +29,7 @@ function FormatTime(seconds)
 end
 while true do
 	--đặt unit farm tiền một
-
+	pressKey(0x45)
 	local args = {
 		[1] = {
 			[1] = "bolm",
