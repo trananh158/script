@@ -131,14 +131,7 @@ while true do
 
 	--update
 	pcall(function()
-		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
-			local args = {
-				[1] = "Upgrade",
-				[2] = [child]
-			}
 		
-			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
-		end
 		--[[if workspace:WaitForChild("Maingame"):WaitForChild("Unit"):FindFirstChild("Ichongo (True Bankai)") then
 		
 			local args = {
