@@ -30,6 +30,8 @@ print("ingame")
 			}
 
 			game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+wait(5)
+game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer()
 		  end
 		task.wait(2)
 	end
