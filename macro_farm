@@ -56,7 +56,7 @@ while true do
 	}
 
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
+--[[
 
 	--mash 1
 
@@ -82,12 +82,12 @@ while true do
 	}
 
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
+]]--
 	--mash 3
 
 	local args = {
 		[1] = {
-			[1] = "Rudy",
+			[1] = "Fleeren (Full Power)",
 			[2] = CFrame.new(29.514371871948242, -20.566856384277344, 46.80779266357422, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		},
 		[2] = Vector3.new(29.514373779296875, -21.89059829711914, 46.80779266357422)
