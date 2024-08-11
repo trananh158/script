@@ -206,10 +206,11 @@ while true do
 		}
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+wait (5) 
+game:GetService("TeleportService"):Teleport(17282336195)
 	end
 	
 	task.wait(2)
 	
-wait (5) 
-game:GetService("TeleportService"):Teleport(17282336195)
+
 end
