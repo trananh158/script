@@ -5,7 +5,7 @@ repeat task.wait(2) until game:IsLoaded()
 
 print("ingame")
 
-	while false do 
+	while true do 
 		if Workspace.PLAY.Story.Enter.Room4.Players.Value ~= 0 then
 			print("NOT")
 		else
