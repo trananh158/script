@@ -59,7 +59,7 @@ while true do
 
 
 	--mash 1
-
+--[[
 	local args = {
 		[1] = {
 			[1] = "Aozort",
@@ -70,7 +70,7 @@ while true do
 
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-
+]]--
 	--mash 2
 
 	local args = {
@@ -97,7 +97,7 @@ while true do
 
 	local args = {
 		[1] = {
-			[1] = "Homuro (Time Traveller)",
+			[1] = "Rudy",
 			[2] = CFrame.new(29.514371871948242, -20.566856384277344, 46.80779266357422, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		},
 		[2] = Vector3.new(29.514373779296875, -21.89059829711914, 46.80779266357422)
