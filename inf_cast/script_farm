@@ -22,7 +22,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
 
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
 local args = {
     [1] = {
         [1] = "bolm",
@@ -32,7 +32,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+repeat wait(0.55) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
 local args = {
     [1] = {
         [1] = "bolm",
@@ -42,7 +42,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
+repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
 local args = {
     [1] = {
         [1] = "Homuro (Time Traveller)",
@@ -53,7 +53,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 
 
 local args = {
