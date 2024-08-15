@@ -1,0 +1,110 @@
+local TARGET_FRAME_RATE = 10
+
+local frameStart = os.clock()
+
+RunService.PreSimulation:Connect(function()
+    while os.clock() - frameStart < 1 / TARGET_FRAME_RATE do
+        -- We do nothing until the target time has elapsed
+    end
+
+    -- Mark the start of the next frame right before this one is rendered
+    frameStart = os.clock()
+end)
+
+task.wait(5)
+local args = {
+    [1] = "Start",
+    [2] = "Button"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
+
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+local args = {
+    [1] = {
+        [1] = "bolm",
+        [2] = CFrame.new(34.857452392578125, 386.2886047363281, -43.65928268432617, 1, -1.3877787807814457e-16, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(34.75767135620117, 385, -43.646690368652344)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+local args = {
+    [1] = {
+        [1] = "bolm",
+        [2] = CFrame.new(34.857452392578125, 386.2886047363281, -43.65928268432617, 1, -1.3877787807814457e-16, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(34.75767135620117, 385, -43.646690368652344)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
+local args = {
+    [1] = {
+        [1] = "Homuro (Time Traveller)",
+        [2] = CFrame.new(-25.09463882446289, 387.3954772949219, -43.93950271606445, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-25.11581802368164, 386, -43.94438171386719)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+
+
+local args = {
+    [1] = {
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(68.97322845458984, 390.2890625, -35.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(68.99058532714844, 389, -35.965457916259766)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+
+while checkfarm < 2  do
+checkfarm = 0
+for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+	if child.Name == "bolm" then
+	
+	local args = {
+				[1] = "Upgrade",
+				[2] = (child)
+			}
+		
+	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+	
+	end
+	if child.Name == "bolm" and  child.Stats.UpgradeNum == 14 then
+	
+		checkfarm = checkfarm + 1
+	
+	end
+	end	
+	wait(1)
+end
+
+
+while true do 
+
+	for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+			local args = {
+				[1] = "Upgrade",
+				[2] = (child)
+			}
+		
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
+
+		local args = {
+			[1] = "Return"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+	end
+end
