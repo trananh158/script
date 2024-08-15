@@ -1,0 +1,14 @@
+for odr = 1,100 do
+
+if game:GetService("Players").LocalPlayer.InfinityCastle["Room"..odr].Clear.Value == "NotClear" then
+local args = {
+    [1] = "Start",
+    [2] = game:GetService("Players").LocalPlayer.InfinityCastle["Room"..odr].Name
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("InfinityCastle"):InvokeServer(unpack(args))
+print(game:GetService("Players").LocalPlayer.InfinityCastle["Room"..odr].Name)
+break
+end
+
+end
