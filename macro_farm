@@ -59,7 +59,7 @@ while true do
 
 
 	--mash 1
---[[
+
 	local args = {
 		[1] = {
 			[1] = "Satalan (Witch of Jealousy)",
@@ -70,7 +70,7 @@ while true do
 
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-]]--
+
 	--mash 2
 
 	local args = {
