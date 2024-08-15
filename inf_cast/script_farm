@@ -1,4 +1,5 @@
 local RunService = game:GetService("RunService")
+
 local TARGET_FRAME_RATE = 10
 
 local frameStart = os.clock()
