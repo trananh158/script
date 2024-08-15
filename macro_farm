@@ -62,7 +62,7 @@ while true do
 --[[
 	local args = {
 		[1] = {
-			[1] = "Satalan (Witch of JealouJealousy)",
+			[1] = "Satalan (Witch of Jealousy)",
 			[2] = CFrame.new(22.630611419677734, -20.602426528930664, 64.9106674194336, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		},
 		[2] = Vector3.new(22.630611419677734, -21.89099884033203, 64.91067504882812)
