@@ -104,6 +104,29 @@ while true do
 		end
 	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
 
+		game_victory = "non"
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
+			game_victory = "Thua"
+		end
+		
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then 
+			game_victory = "Thắng"
+		end
+
+		data = {
+		  ["embeds"]=
+		    {{
+		      ["description"] = game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory,
+		      ["color"] = null
+		    }}
+		}
+
+		local porn = game:GetService("HttpService"):JSONEncode(data)
+        	local headers = {["content-type"] = "application/json"}
+        	local request = http_request or request or HttpPost or syn.request or http.request
+        	local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+		request(sex)
+		
 		local args = {
 			[1] = "Return"
 		}
