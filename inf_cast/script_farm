@@ -85,13 +85,13 @@ for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):G
 	if child.Name == "bolm" and  child.Stats.UpgradeNum >= 13 then
 	
 		checkfarm = checkfarm + 1
-	
+		print("Check farm :"..checkfarm)
 	end
 	end	
 	wait(1)
 end
 
-
+print("Game start")
 while true do 
 
 	for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
