@@ -67,6 +67,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
+local checkfarm = 0
 
 while checkfarm < 2  do
 checkfarm = 0
