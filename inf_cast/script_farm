@@ -102,8 +102,8 @@ while true do
 		
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
-	if workspace:WaitForChild("Maingame"):WaitForChild("Base").Health.Value <= 0 or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
-
+	if (workspace:WaitForChild("Maingame"):WaitForChild("Base").Health.Value <= 0 or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true) and _G.checkgame ~= true then
+		_G.checkgame = true
 		game_victory = "non"
 		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
 			game_victory = "Thua"
@@ -116,7 +116,7 @@ while true do
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value,
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value,
 		      ["color"] = null
 		    }}
 		}
