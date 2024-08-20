@@ -102,7 +102,7 @@ while true do
 		
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
-	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
+	if workspace:WaitForChild("Maingame"):WaitForChild("Base").Health.Value <= 0 or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
 
 		game_victory = "non"
 		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
