@@ -116,7 +116,7 @@ while true do
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory,
+		      ["description"] = game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value,
 		      ["color"] = null
 		    }}
 		}
