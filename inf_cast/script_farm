@@ -1,16 +1,7 @@
-repeat task.wait(2) until game:IsLoaded()
-
-if game:GetService("Players").LocalPlayer.Name == "trananhf1" then
-print("ingame")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid1/farm_tran"))()
-game:GetService("RunService"):Set3dRenderingEnabled(false)
-else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid1/farm_fes"))()
-
-end 
 
 
---[[local RunService = game:GetService("RunService")
+
+local RunService = game:GetService("RunService")
 
 local TARGET_FRAME_RATE = 10
 
@@ -146,4 +137,3 @@ while true do
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
 	end
 end
-]]--
