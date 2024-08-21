@@ -123,7 +123,7 @@ for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):G
 	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 	
 	end
-	if child.Name == "bolm" and  child.Stats.UpgradeNum == 14 then
+	if child.Name == "bolm" and  child.Stats.UpgradeNum >= 13 then
 	
 		checkfarm = checkfarm + 1
 	
