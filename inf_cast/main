@@ -1,4 +1,3 @@
---[[
 wait(2)
 for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()) do
 			if child.Class.Value == "Gogo" and child.Locked.Value ~= "Locked" then
@@ -18,4 +17,3 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("InfinityCastle"):InvokeServer(unpack(args))
-]]--
