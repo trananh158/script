@@ -166,7 +166,17 @@ while true do
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
 	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
-		
+
+		have_saitamam = "Ko co"
+
+		for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()) do
+			if child.Class.Value == "Sai" then
+				
+			have_saitamam = "Cos saitanma"
+			
+			end
+		end
+
 		_G.checkgame = true
 		game_victory = "non"
 		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
@@ -180,7 +190,7 @@ while true do
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game_victory,
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game_victory.."\n"..have_saitamam,
 		      ["color"] = null
 		    }}
 		}
