@@ -1,6 +1,4 @@
 
-
-
 local RunService = game:GetService("RunService")
 
 local TARGET_FRAME_RATE = 10
@@ -134,10 +132,11 @@ while true do
 		}
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
-		--[[local args = {
+wait(5)
+		local args = {
 			[1] = "Return"
 		}
 
-		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))]]--
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))]]
 	end
 end
