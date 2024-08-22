@@ -126,16 +126,23 @@ while true do
         	local request = http_request or request or HttpPost or syn.request or http.request
         	local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
 		request(sex)
+
+
+local children1 = game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()
+local count1 = #children1
+
+if count1 < 10 then
 		local args = {
 			[1] = "Retry"
 		}
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
-wait(5)
+else
 		local args = {
 			[1] = "Return"
 		}
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+  end
 	end
 end
