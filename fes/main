@@ -2,5 +2,14 @@ repeat task.wait(2) until game:IsLoaded()
 
 if game:GetService("Players").LocalPlayer.Name == "fasertboom999" then
 print("ingame")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid1/farm_fes"))()
+
+if game.PlaceId == 17282336195 then
+print("ingame")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
+
+else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
+
+end 
+
 end
