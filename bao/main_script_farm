@@ -12,7 +12,7 @@ print("ingame")
 			keypress(0x57)
 			task.wait(1)
 			local args = {
-			[1] = "Hollow Land",
+			[1] = "Large Village",
 			[2] = "Inf",
 			[3] = workspace:WaitForChild("PLAY"):WaitForChild("Story"):WaitForChild("Enter"):WaitForChild("Room4")
 			}
@@ -21,7 +21,7 @@ print("ingame")
 			task.wait(1)
 			--Hollow Land | Large Village
 			local args = {
-			[1] = "Hollow Land",
+			[1] = "Large Village",
 			[2] = "Inf",
 			[3] = "Nightmare",
 			[4] = "Start"
