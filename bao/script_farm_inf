@@ -1,7 +1,7 @@
 game:GetService("GuiService").ErrorMessageChanged:Connect(function()
 wait (5) game:GetService("TeleportService"):Teleport(17282336195)
     end);
-game:GetService("RunService"):Set3dRenderingEnabled(false)
+--game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 local RunService = game:GetService("RunService")
 
