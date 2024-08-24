@@ -201,11 +201,11 @@ while true do
         	local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
 		request(sex)
 		
-		--[[local args = {
+		local args = {
 			[1] = "Retry"
 		}
 
-		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))]]--
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
 		wait(5)
 		local args = {
 			[1] = "Return"
