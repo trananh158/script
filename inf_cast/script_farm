@@ -144,5 +144,6 @@ else
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
   end
+wait(5)
 	end
 end
