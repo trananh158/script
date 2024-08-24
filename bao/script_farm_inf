@@ -107,17 +107,17 @@ while true do
 
 
 	--ichogo 1
---[[
+
 	local args = {
 		[1] = {
-			[1] = "Ichongo (True Bankai)",
+			[1] = "Homuro (Time Traveller)",
 			[2] = CFrame.new(25.67717170715332, -20.601587295532227, 42.665550231933594, 1, 0, 0, 0, 1, 0, 0, 0, 1)
 		},
 		[2] = Vector3.new(25.677078247070312, -21.89015007019043, 42.66563415527344)
 	}
 
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
+--[[
 	--ichigo 2
 
 	local args = {
