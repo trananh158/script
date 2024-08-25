@@ -65,9 +65,9 @@ repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Homuro (Time Traveller)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -77,9 +77,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Aozort (Hollow Form)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -88,9 +88,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -99,11 +99,10 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Ichongo (True Bankai)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
 }
-
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
@@ -136,9 +135,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Sai",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+                [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
