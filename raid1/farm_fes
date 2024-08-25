@@ -43,7 +43,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
-while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text ~= "Wave : 11"  do
+while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text ~= "Wave : 8"  do
 	pcall(function()
 
 		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
@@ -60,26 +60,23 @@ while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text 
 		end
 	end)
 end
-
-repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
-        [1] = "Homuro (Time Traveller)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
-
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
-        [1] = "Aozort (Hollow Form)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -88,9 +85,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -99,9 +96,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Ichongo (True Bankai)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -132,28 +129,40 @@ for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):G
 	wait(1)
 end
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
 local args = {
     [1] = {
-        [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [1] = "Homuro (Time Traveller)",
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
     [1] = {
-        [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [1] = "Aozort (Hollow Form)",
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5000
+local args = {
+    [1] = {
+        [1] = "Sai",
+        [2] = CFrame.new(-481.3585205078125, 68.9258804321289, -710.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-481.7160949707031, 67.5599365234375, -710.4560546875)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 while true do 
 
@@ -166,16 +175,6 @@ while true do
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
 	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
-
-		have_saitamam = "Ko co"
-
-		for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()) do
-			if child.Class.Value == "Sai" then
-				
-			have_saitamam = "Cos saitanma"
-			
-			end
-		end
 
 		_G.checkgame = true
 		game_victory = "non"
