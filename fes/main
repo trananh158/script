@@ -5,10 +5,11 @@ print("ingame")
 
 if game.PlaceId == 17282336195 then
 print("ingame")
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
 
 else
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid2/script_fes"))()
 
 end 
 
