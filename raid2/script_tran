@@ -1,0 +1,221 @@
+repeat task.wait(2) until game:IsLoaded()
+
+if game.PlaceId == 17282336195 then
+print("ingame")
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
+
+else
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
+
+end 
+
+
+--[[
+local RunService = game:GetService("RunService")
+local TARGET_FRAME_RATE = 10
+
+local frameStart = os.clock()
+
+RunService.PreSimulation:Connect(function()
+    while os.clock() - frameStart < 1 / TARGET_FRAME_RATE do
+        -- We do nothing until the target time has elapsed
+    end
+
+    -- Mark the start of the next frame right before this one is rendered
+    frameStart = os.clock()
+end)
+
+task.wait(5)
+local args = {
+    [1] = "Start",
+    [2] = "Button"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
+
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+local args = {
+    [1] = {
+        [1] = "bolm",
+        [2] = CFrame.new(-21.3073120117188, -15.97648620605469, -45.4407958984375, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-21.3201904296875, 15.48379516601562, -45.4414672851562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+local args = {
+    [1] = {
+        [1] = "bolm",
+        [2] = CFrame.new(-21.3073120117188, -15.97648620605469, -45.4407958984375, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-21.3201904296875, 15.48379516601562, -45.4414672851562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text ~= "Wave : 8"  do
+	pcall(function()
+
+		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+			if child.Name == "bolm" then
+			
+			local args = {
+						[1] = "Upgrade",
+						[2] = (child)
+					}
+				
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+			
+			end
+		end
+	end)
+end
+
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+local args = {
+    [1] = {
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
+local args = {
+    [1] = {
+        [1] = "Sung (Shadow Monarch)",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+local args = {
+    [1] = {
+        [1] = "Satalan (Witch of Jealousy)",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
+local args = {
+    [1] = {
+        [1] = "Homuro (Time Traveller)",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
+
+checkfarm = 0
+
+while checkfarm < 2  do
+checkfarm = 0
+for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+	if child.Name == "bolm" then
+	
+	local args = {
+				[1] = "Upgrade",
+				[2] = (child)
+			}
+		
+	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+	
+	end
+	if child.Name == "bolm" and  child.Stats.UpgradeNum.Value >= 14 then
+	
+		checkfarm = checkfarm + 1
+	
+		end
+	end	
+	wait(1)
+end
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+local args = {
+    [1] = {
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+local args = {
+    [1] = {
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5000
+local args = {
+    [1] = {
+        [1] = "Sai",
+        [2] = CFrame.new(-13.3585205078125, -15.9258804321289, 49.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
+}
+while true do 
+
+	for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+			local args = {
+				[1] = "Upgrade",
+				[2] = (child)
+			}
+		
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+		end
+	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
+	
+		_G.checkgame = true
+		game_victory = "non"
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
+			game_victory = "Thua"
+		end
+		
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then 
+			game_victory = "Thắng"
+		end
+
+		data = {
+		  ["embeds"]=
+		    {{
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game_victory.."\n"..have_saitamam,
+		      ["color"] = null
+		    }}
+		}
+
+		local porn = game:GetService("HttpService"):JSONEncode(data)
+        local headers = {["content-type"] = "application/json"}
+        local request = http_request or request or HttpPost or syn.request or http.request
+        local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+		request(sex)
+		
+		local args = {
+			[1] = "Retry"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+	end
+end
+]]--
