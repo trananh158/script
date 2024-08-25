@@ -61,7 +61,7 @@ while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text 
 	end)
 end
 
-repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
