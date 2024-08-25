@@ -6,6 +6,7 @@ print("ingame")
 
 else
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid2/script_tran"))()
 
 end 
 
