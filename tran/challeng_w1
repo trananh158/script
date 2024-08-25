@@ -46,10 +46,52 @@ game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(a
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5800
 local args = {
     [1] = {
-        [1] = "Homuro (Time Traveller)",
-        [2] = CFrame.new(-37.18061447143555, -19.968538284301758, 173.7203826904297, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [1] = "Sung (Shadow Monarch)",
+        [2] = CFrame.new(8.138026237487793, -14.277613639831543, 162.05078125, 1, -7.191469819645135e-08, 2.3785341609434876e-16, 7.191469819645135e-08, 1, -6.614875758259586e-09, 2.3785338962456915e-16, 6.614875758259586e-09, 1)
     },
-    [2] = Vector3.new(-37.2004692)
+    [2] = Vector3.new(8.452494621276855, -14.604728698730469, 162.17599487304688)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+while true do 
+
+	for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+			if child.Name ~= "Emilian" then
+				local args = {
+				[1] = "Upgrade",
+				[2] = (child)
+			}
+		
+			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+			end
+		end
+			
+	if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then
+
+
+		_G.checkgame = true
+		game_victory = "non"
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
+			game_victory = "Thua"
+		end
+		
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then 
+			game_victory = "Thắng"
+		end
+
+		data = {
+		  ["embeds"]=
+		    {{
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game_victory,
+		      ["color"] = null
+		    }}
+		}
+
+		local porn = game:GetService("HttpService"):JSONEncode(data)
+        local headers = {["content-type"] = "application/json"}
+        local request = http_request or request or HttpPost or syn.request or http.request
+        local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+		request(sex)
+		
 		local args = {
 			[1] = "Retry"
 		}
