@@ -1,0 +1,59 @@
+local RunService = game:GetService("RunService")
+local TARGET_FRAME_RATE = 10
+
+local frameStart = os.clock()
+
+RunService.PreSimulation:Connect(function()
+    while os.clock() - frameStart < 1 / TARGET_FRAME_RATE do
+        -- We do nothing until the target time has elapsed
+    end
+
+    -- Mark the start of the next frame right before this one is rendered
+    frameStart = os.clock()
+end)
+
+task.wait(5)
+local args = {
+    [1] = "Start",
+    [2] = "Button"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
+
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 4000
+local args = {
+    [1] = {
+        [1] = "Emilian",
+        [2] = CFrame.new(-39.779415130615234, -19.968151092529297, 173.43972778320312, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-39.8079833984375, -21.256757736206055, 173.4083251953125)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5000
+local args = {
+    [1] = {
+        [1] = "Fleeren (Full Power)",
+        [2] = CFrame.new(8.138026237487793, -14.277613639831543, 162.05078125, 1, -7.191469819645135e-08, 2.3785341609434876e-16, 7.191469819645135e-08, 1, -6.614875758259586e-09, 2.3785338962456915e-16, 6.614875758259586e-09, 1)
+    },
+    [2] = Vector3.new(8.452494621276855, -14.604728698730469, 162.17599487304688)
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5800
+local args = {
+    [1] = {
+        [1] = "Homuro (Time Traveller)",
+        [2] = CFrame.new(-37.18061447143555, -19.968538284301758, 173.7203826904297, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-37.2004692)
+		local args = {
+			[1] = "Retry"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+	end
+end
