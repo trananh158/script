@@ -123,7 +123,7 @@ for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):G
 	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 	
 	end
-	if child.Name == "bolm" and  child.Stats.UpgradeNum.Value >= 13 then
+	if child.Name == "bolm" and  child.Stats.UpgradeNum.Value >= 14 then
 	
 		checkfarm = checkfarm + 1
 	
@@ -135,7 +135,7 @@ end
 repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
-        [1] = "Fleeren (Full Power)",
+        [1] = "Sai",
         [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
     [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
@@ -143,16 +143,6 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
-local args = {
-    [1] = {
-        [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(-463.3585205078125, 67.9258804321289, -697.7022094726562, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-    },
-    [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
-}
-
-game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
 while true do 
