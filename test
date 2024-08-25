@@ -1,129 +1,176 @@
-while true do
-	--đặt unit farm tiền một
 
-	local args = {
-		[1] = {
-			[1] = "bolm",
-			[2] = CFrame.new(32.84442138671875, -20.602005004882812, 71.28258514404297, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		},
-		[2] = Vector3.new(32.844017028808594, -21.890605926513672, 71.28240203857422)
-	}
+Categories > Exploiting > Scripts >
 
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+fire remote events gui
+natilinalku
+Posts: 16
 
-	--đặt unit farm tiền 2
+Threads: 6
 
-	local args = {
-		[1] = {
-			[1] = "bolm",
-			[2] = CFrame.new(36.58446502685547, -20.571765899658203, 71.74803161621094, 1, 1.084133849360569e-08, 0, -1.084133849360569e-08, 1, -2.626462958232878e-08, 0, 2.626462958232878e-08, 1)
-		},
-		[2] = Vector3.new(36.58406066894531, -21.890413284301758, 71.74784851074219)
-	}
+Joined: Aug, 2021
 
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+Reputation: 0
 
+Posted May 20, 2022
 
-	--mash 1
+Before using script read this:
 
-	local args = {
-		[1] = {
-			[1] = "Mish",
-			[2] = CFrame.new(22.630611419677734, -20.602426528930664, 64.9106674194336, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		},
-		[2] = Vector3.new(22.630611419677734, -21.89099884033203, 64.91067504882812)
-	}
+1.Clicking fire remote event or invoke remote function will activate a lot times
 
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+2.This script is little broken 
 
+3.Everything is made by me
 
-	--mash 2
+4.If you want to share this script make credits to me
 
-	local args = {
-		[1] = {
-			[1] = "Mish",
-			[2] = CFrame.new(29.675403594970703, -20.56421661376953, 53.758262634277344, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		},
-		[2] = Vector3.new(29.67540168762207, -21.89112091064453, 53.75826644897461)
-	}
+5.Tested only on Krnl
 
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
-	--mash 3
-
-	local args = {
-		[1] = {
-			[1] = "Mish",
-			[2] = CFrame.new(29.514371871948242, -20.566856384277344, 46.80779266357422, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		},
-		[2] = Vector3.new(29.514373779296875, -21.89059829711914, 46.80779266357422)
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
-
-	--ichogo 1
-
-	local args = {
-		[1] = {
-			[1] = "Ichongo (True Bankai)",
-			[2] = CFrame.new(25.67717170715332, -20.601587295532227, 42.665550231933594, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		},
-		[2] = Vector3.new(25.677078247070312, -21.89015007019043, 42.66563415527344)
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
-	--ichigo 2
-
-	local args = {
-		[1] = {
-			[1] = "Ichongo (True Bankai)",
-			[2] = CFrame.new(30.848413467407227, -20.602642059326172, 42.26481628417969, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-		},
-		[2] = Vector3.new(30.848318099975586, -21.89120864868164, 42.26490020751953)
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
-	--ichigo 3
-
-	local args = {
-		[1] = {
-			[1] = "Ichongo (True Bankai)",
-			[2] = CFrame.new(35.822906494140625, -20.60264015197754, 42.03776550292969, 1, 2.1596850106070998e-24, -1.3234889800848443e-23, 2.1596850106070998e-24, 1, 0, -1.3234889800848443e-23, 0, 1)
-		},
-		[2] = Vector3.new(35.822818756103516, -21.891210556030273, 42.03784942626953)
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+local ScreenGui = Instance.new("ScreenGui")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local UIListLayout = Instance.new("UIListLayout")
+local holder = Instance.new("Frame")
+local TextLabel = Instance.new("TextLabel")
+local TextButton = Instance.new("TextButton")
+local TextButton_2 = Instance.new("TextButton")
+local PartVlaue = Instance.new("ObjectValue")
+local event = Instance.new("RemoteEvent")
+local TextButton123 = Instance.new("TextBox")
 
 
 
-	--update
-	pcall(function()
-    local args = {
-		[1] = "Upgrade",
-		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Ichongo (True Bankai)")
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
-
-	local args = {
-		[1] = "Upgrade",
-		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("Mish")
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
-
-	local args = {
-		[1] = "Upgrade",
-		[2] = workspace:WaitForChild("Maingame"):WaitForChild("Unit"):WaitForChild("bolm")
-	}
-
-	game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
-	end)
-
-	task.wait(2)
-
+ScreenGui.Parent = game.CoreGui
+symbols = {"!", "@", '"', "#", "â„–", "$", ";", "%", '^', ':', '&', '?', '*', '(', ')', '/', '-', '+', '.', '>', ',', '<', '{', '}', '[', ']', '~', '`', '=', "'", '|', ' ', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', 'â˜º', 'â˜»', 'â™¥', 'â™¦', 'â™£', 'â€¢', 'â—˜', 'â—‹', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'W', 'X', 'Y', 'Z'}
+ScreenGui.Name= ''
+for i = 1, 10 do
+    ScreenGui.Name = (ScreenGui.Name .. symbols[math.random(#symbols)])
 end
+
+ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(0, 85, 214)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(44, 255, 213)
+ScrollingFrame.BorderSizePixel = 0
+ScrollingFrame.Position = UDim2.new(0.23140496, 0, 0.00956937764, 0)
+ScrollingFrame.Size = UDim2.new(0, 416, 0, 613)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 4)
+
+
+TextButton123.Parent = ScreenGui
+TextButton123.BackgroundColor3 = Color3.fromRGB(25, 194, 25)
+TextButton123.Position = UDim2.new(0, 0, 0.470494419, 0)
+TextButton123.Size = UDim2.new(0, 93, 0, 18)
+TextButton123.Font = Enum.Font.SourceSans
+TextButton123.Text = "open menu"
+TextButton123.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton123.TextScaled = true
+TextButton123.TextSize = 14.000
+TextButton123.TextWrapped = true
+TextButton123.PlaceholderText = "put remote event or remote function args here like args = { [1] = 'Cash', [2] = '69420'} and don't forget to type return args in end(if you want to fire remote events and remote functions erase all)"
+
+event.Parent = ScrollingFrame
+
+UIListLayout.Parent = ScrollingFrame
+UIListLayout.SortOrder = Enum.SortOrder.LayoutOrder
+UIListLayout.Padding = UDim.new(0, 10)
+
+holder.Name = "main"
+holder.Parent = ScrollingFrame
+holder.Active = true
+holder.BackgroundColor3 = Color3.fromRGB(11, 251, 255)
+holder.Position = UDim2.new(0, 0, -0.00318979262, 0)
+holder.Size = UDim2.new(0, 404, 0, 54)
+
+PartVlaue.Parent = holder
+PartVlaue.Name = "Object"
+
+TextLabel.Parent = holder
+TextLabel.BackgroundColor3 = Color3.fromRGB(8, 255, 36)
+TextLabel.Size = UDim2.new(0, 98, 0, 54)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 14.000
+TextLabel.Name = 'NameForTextLabel'
+TextLabel.Position = UDim2.new(0.294697225, 0, 0.0632641912, 0)
+
+TextButton.Parent = holder
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 247, 0)
+TextButton.Position = UDim2.new(0.871572673, 0, 0.0680489019, 0)
+TextButton.Size = UDim2.new(0, 51, 0, 50)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Fire"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextScaled = true
+TextButton.TextSize = 14.000
+TextButton.TextWrapped = true
+
+TextButton_2.Parent = ScreenGui
+TextButton_2.BackgroundColor3 = Color3.fromRGB(25, 194, 25)
+TextButton_2.Position = UDim2.new(0, 0, 0.470494419, 0)
+TextButton_2.Size = UDim2.new(0, 93, 0, 18)
+TextButton_2.Font = Enum.Font.SourceSans
+TextButton_2.Text = "open menu"
+TextButton_2.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton_2.TextScaled = true
+TextButton_2.TextSize = 14.000
+TextButton_2.TextWrapped = true
+
+
+local id = 0
+
+for i,v in pairs(game:GetDescendants()) do
+	if v.ClassName == "RemoteEvent" then
+		local c1 = holder:Clone()
+		c1.Parent = ScrollingFrame
+		c1.Object.Value = v
+		c1.NameForTextLabel.Text = v.Name
+		c1.TextButton.Text = "Fire remote event"
+		id=id+1
+		c1.Name = id
+	elseif v.ClassName == "RemoteFunction" then
+		local c2 = holder:Clone()
+		c2.Parent = ScrollingFrame
+		c2.Object.Value = v
+		c2.NameForTextLabel.Text = v.Name
+		c2.TextButton.Text = "Invoke remote function"
+		id=id+1
+		c2.Name = id
+	end
+end
+
+TextButton_2.MouseButton1Click:Connect(function()
+	if ScrollingFrame.Visible == true then
+		ScrollingFrame.Visible = false
+		ScrollingFrame.Visible = false
+	else
+		ScrollingFrame.Visible = true
+		ScrollingFrame.Active = true
+	end
+end)
+event.OnClientEvent:Connect(function(idnumber)
+	local obj = ScrollingFrame["" .. idnumber].Object.Value
+	obj:FireServer()
+end)
+game:GetService("RunService").Heartbeat:Connect(function()
+	_G.argsforsupermeganotsussygui = loadstring(TextButton123.Text)
+	for i,v in pairs(ScrollingFrame:GetChildren()) do
+		if v.ClassName ~= "RemoteEvent" and v.ClassName ~= "UIListLayout" then
+			v.TextButton.MouseButton1Click:Connect(function()
+				local asd = v.Object.Value
+				if asd.ClassName == "RemoteEvent" then
+					if _G.argsforsupermeganotsussygui == '' then
+						asd:FireServer()
+					else
+						asd:FireServer(_G.argsforsupermeganotsussygui)
+					end
+					
+				else
+					if _G.argsforsupermeganotsussygui == '' then
+						asd:InvokeServer()
+					else
+						asd:InvokeServer(_G.argsforsupermeganotsussygui)
+					end					
+				end
+			end)
+		end
+	end
+end)
