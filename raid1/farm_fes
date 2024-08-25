@@ -189,7 +189,7 @@ while true do
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game_victory.."\n"..have_saitamam,
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game_victory,
 		      ["color"] = null
 		    }}
 		}
