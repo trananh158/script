@@ -166,6 +166,8 @@ local args = {
     },
     [2] = Vector3.new(-13.3585205078125, -15.9258804321289, 49.7022094726562)
 }
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
 while true do 
 
 	for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
