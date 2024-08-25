@@ -84,7 +84,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
     [1] = {
         [1] = "Satalan (Witch of Jealousy)",
@@ -94,6 +94,31 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+checkfi = 0
+
+while checkfi < 1  do
+checkfi = 0
+for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+        if child.Name == "Fleeren (Full Power)" then
+
+        local args = {
+                                [1] = "Upgrade",
+                                [2] = (child)
+                        }
+
+        game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
+
+        end
+        if child.Name == "Fleeren (Full Power)" and  child.Stats.UpgradeNum.Value >= 5 then
+
+                checkfi = checkfi + 1
+
+                end
+        end        
+        wait(1)
+end
+
 
 repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
