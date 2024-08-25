@@ -36,9 +36,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(8.138026237487793, -14.277613639831543, 162.05078125, 1, -7.191469819645135e-08, 2.3785341609434876e-16, 7.191469819645135e-08, 1, -6.614875758259586e-09, 2.3785338962456915e-16, 6.614875758259586e-09, 1)
+        [2] = CFrame.new(-39.779415130615234, -19.968151092529297, 173.43972778320312, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(8.452494621276855, -14.604728698730469, 162.17599487304688)
+    [2] = Vector3.new(-39.8079833984375, -21.256757736206055, 173.4083251953125)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -46,10 +46,19 @@ game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(a
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5800
 local args = {
     [1] = {
-        [1] = "Sung (Shadow Monarch)",
-        [2] = CFrame.new(8.138026237487793, -14.277613639831543, 162.05078125, 1, -7.191469819645135e-08, 2.3785341609434876e-16, 7.191469819645135e-08, 1, -6.614875758259586e-09, 2.3785338962456915e-16, 6.614875758259586e-09, 1)
+        [1] = "Homuro (Time Traveller)",
+        [2] = CFrame.new(-39.779415130615234, -19.968151092529297, 173.43972778320312, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(8.452494621276855, -14.604728698730469, 162.17599487304688)
+    [2] = Vector3.new(-39.8079833984375, -21.256757736206055, 173.4083251953125)
+}
+
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 8000
+local args = {
+    [1] = {
+        [1] = "Sung (Shadow Monarch)",
+        [2] = CFrame.new(-39.779415130615234, -19.968151092529297, 173.43972778320312, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(-39.8079833984375, -21.256757736206055, 173.4083251953125)
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 while true do 
