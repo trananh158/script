@@ -34,7 +34,7 @@ while true do
 	
 	local args = {
     [1] = {
-        [1] = "Emilian",
+        [1] = "Homuro (Time Traveller)",
         [2] = CFrame.new(22.810216903686523, -20.602516174316406, 75.86872100830078, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
 		[2] = Vector3.new(23.26119613647461, -20.964815139770508, 75.70857238769531)
@@ -42,10 +42,29 @@ while true do
 
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-	
 	local args = {
     [1] = {
-        [1] = "Ichongo",
+        [1] = "Aozort (Hollow Form)",
+        [2] = CFrame.new(22.810216903686523, -20.602516174316406, 75.86872100830078, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+		[2] = Vector3.new(23.26119613647461, -20.964815139770508, 75.70857238769531)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+local args = {
+    [1] = {
+        [1] = "SaiSai",
+        [2] = CFrame.new(22.810216903686523, -20.602516174316406, 75.86872100830078, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+		[2] = Vector3.new(23.26119613647461, -20.964815139770508, 75.70857238769531)
+	}
+
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+	local args = {
+    [1] = {
+        [1] = "Ichongo (True Bankai)",
         [2] = CFrame.new(22.676563262939453, -20.602462768554688, 56.42585372924805, 1, 0, 0, 1.9809257781948863e-16, 1, -8.728952983536975e-16, 0, 0, 1)
     },
     [2] = Vector3.new(22.618022918701172, -21.891069412231445, 56.410926818847656)
@@ -56,7 +75,7 @@ while true do
 	
 	local args = {
     [1] = {
-        [1] = "Ichongo (Bankai)",
+        [1] = "Fleeren (Full Power)",
         [2] = CFrame.new(36.195648193359375, -20.60170555114746, 65.5840072631836, 1, -1.1125557065375661e-27, 0, -1.1125557065375661e-27, 1, 0, 0, 0, 1)
     },
 		[2] = Vector3.new(36.205223083496094, -21.890270233154297, 65.56546783447266)
