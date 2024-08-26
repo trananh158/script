@@ -52,6 +52,8 @@ local args = {
     [2] = Vector3.new(54.87920379638672, -21.256757736206055, 111.84768676757812)
 }
 
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 8000
 local args = {
     [1] = {
