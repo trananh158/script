@@ -13,3 +13,4 @@ elseif Workspace.Maingame.Setting.Stages.Value == "Hollow Land" then
 else 
   loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
 end 
+end
