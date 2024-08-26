@@ -47,9 +47,9 @@ repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Homuro (Time Traveller)",
-        [2] = CFrame.new(-39.779415130615234, -19.968151092529297, 173.43972778320312, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(54.818878173828125, -19.91135025024414, 111.842529296875, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(-39.8079833984375, -21.256757736206055, 173.4083251953125)
+    [2] = Vector3.new(54.87920379638672, -21.256757736206055, 111.84768676757812)
 }
 
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 8000
