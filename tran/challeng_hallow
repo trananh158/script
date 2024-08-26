@@ -25,9 +25,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Emilian",
-        [2] = CFrame.new(62.60606384277344, -20.86110496520996, 196.44224548339844, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(67.75739288330078, -20.69817543029785, 160.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(62.339046478271484, -20.915409088134766, 196.6764678955078)
+    [2] = Vector3.new(67.7652816772461, -22.190521240234375, 160.5369873046875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -36,9 +36,9 @@ repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
-        [2] = CFrame.new(62.60606384277344, -20.86110496520996, 196.44224548339844, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(67.75739288330078, -20.69817543029785, 160.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(62.339046478271484, -20.915409088134766, 196.6764678955078)
+    [2] = Vector3.new(67.7652816772461, -22.190521240234375, 160.5369873046875)
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
@@ -47,18 +47,18 @@ repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Homuro (Time Traveller)",
-        [2] = CFrame.new(62.60606384277344, -20.86110496520996, 196.44224548339844, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(67.75739288330078, -20.69817543029785, 160.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(62.339046478271484, -20.915409088134766, 196.6764678955078)
+    [2] = Vector3.new(67.7652816772461, -22.190521240234375, 160.5369873046875)
 }
 
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 8000
 local args = {
     [1] = {
         [1] = "Sung (Shadow Monarch)",
-        [2] = CFrame.new(62.60606384277344, -20.86110496520996, 196.44224548339844, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(67.75739288330078, -20.69817543029785, 160.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(62.339046478271484, -20.915409088134766, 196.6764678955078)
+    [2] = Vector3.new(67.7652816772461, -22.190521240234375, 160.5369873046875)
 }
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 while true do 
