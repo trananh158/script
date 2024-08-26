@@ -1,0 +1,63 @@
+game:GetService("GuiService").ErrorMessageChanged:Connect(function()
+wait (5) game:GetService("TeleportService"):Teleport(17282336195)
+    end);
+repeat task.wait(2) until game:IsLoaded()
+
+print("ingame")
+
+	while true do 
+		if game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room1.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room1.Players.Value == 0 then
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room1.CFrame
+			task.wait(1)
+			keypress(0x57)
+			task.wait(1)
+			local args = {
+			[1] = nil,
+			[2] = nil,
+			[3] = nil,
+			[4] = "Challenge"
+			}
+
+      game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+		elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room2.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room2.Players.Value == 0 then 
+      game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room2.CFrame
+			task.wait(1)
+			keypress(0x57)
+			task.wait(1)
+			local args = {
+			[1] = nil,
+			[2] = nil,
+			[3] = nil,
+			[4] = "Challenge"
+			}
+
+      game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+      elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room3.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room3.Players.Value == 0 then 
+          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room3.CFrame
+    			task.wait(1)
+    			keypress(0x57)
+    			task.wait(1)
+    			local args = {
+    			[1] = nil,
+    			[2] = nil,
+    			[3] = nil,
+    			[4] = "Challenge"
+    			}
+    
+          game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+      elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room4.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room4.Players.Value == 0 then 
+          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room4.CFrame
+    			task.wait(1)
+    			keypress(0x57)
+    			task.wait(1)
+    			local args = {
+    			[1] = nil,
+    			[2] = nil,
+    			[3] = nil,
+    			[4] = "Challenge"
+    			}
+    
+          game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+        end
+		task.wait(2)
+	end
