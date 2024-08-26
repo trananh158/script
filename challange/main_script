@@ -58,6 +58,27 @@ print("ingame")
     			}
     
           game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
-        end
-		task.wait(2)
+        else
+		wait(2)
+		for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()) do
+			if child.Class.Value == "Gogo" and child.Locked.Value ~= "Locked" then
+				
+			print(child.Name)
+			local args = {
+				[1] = (child)
+			}
+
+			game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer(unpack(args))
+			end
+		end
+		wait(1)
+		local args = {
+		    [1] = "Start",
+		    [2] = game:GetService("Players").LocalPlayer.InfinityCastle["Room50"].Name
+		}
+		
+		game:GetService("ReplicatedStorage"):WaitForChild("InfinityCastle"):InvokeServer(unpack(args))
+
 	end
+		task.wait(2)
+end
