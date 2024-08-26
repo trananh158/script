@@ -102,7 +102,7 @@ while true do
 		request(sex)
 		
 		local args = {
-			[1] = "Retry"
+			[1] = "Return"
 		}
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
