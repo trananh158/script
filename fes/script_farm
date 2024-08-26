@@ -3,7 +3,7 @@ local args = {
     [1] = "Start",
     [2] = "Button"
 }
-
+--[[
 coroutine.wrap(function()
     while true do
       local args = {
@@ -17,7 +17,7 @@ wait(1)
     end
     
 end)()
-
+]]--
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
 function FormatTime(seconds)
     local hours = math.floor(seconds / 3600)
