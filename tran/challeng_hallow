@@ -47,10 +47,13 @@ repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value
 local args = {
     [1] = {
         [1] = "Homuro (Time Traveller)",
-        [2] = CFrame.new(67.75739288330078, -20.69817543029785, 160.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+        [2] = CFrame.new(60.75739288330078, -20.69817543029785, 79.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
-    [2] = Vector3.new(67.7652816772461, -22.190521240234375, 160.5369873046875)
+    [2] = Vector3.new(60.7652816772461, -20.190521240234375, 79.5369873046875)
 }
+
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
 
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 8000
 local args = {
