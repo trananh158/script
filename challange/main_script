@@ -6,8 +6,8 @@ repeat task.wait(2) until game:IsLoaded()
 print("ingame")
 
 	while true do 
-		if game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room1.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room1.Players.Value == 0 then
-			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room1.CFrame
+		if game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room1.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room1.Players.Value == 0 then
+			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter.Room1.CFrame
 			task.wait(1)
 			keypress(0x57)
 			task.wait(1)
@@ -19,8 +19,8 @@ print("ingame")
 			}
 
       game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
-		elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room2.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room2.Players.Value == 0 then 
-      game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room2.CFrame
+		elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room2.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room2.Players.Value == 0 then 
+      game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter.Room2.CFrame
 			task.wait(1)
 			keypress(0x57)
 			task.wait(1)
@@ -32,8 +32,8 @@ print("ingame")
 			}
 
       game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
-      elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room3.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room3.Players.Value == 0 then 
-          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room3.CFrame
+      elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room3.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room3.Players.Value == 0 then 
+          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter.Room3.CFrame
     			task.wait(1)
     			keypress(0x57)
     			task.wait(1)
@@ -45,8 +45,8 @@ print("ingame")
     			}
     
           game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
-      elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room4.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challange.Enter.Room4.Players.Value == 0 then 
-          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challange.Enter.Room4.CFrame
+      elseif game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room4.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room4.Players.Value == 0 then 
+          game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter.Room4.CFrame
     			task.wait(1)
     			keypress(0x57)
     			task.wait(1)
