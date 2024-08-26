@@ -4,6 +4,20 @@ local args = {
     [2] = "Button"
 }
 
+coroutine.wrap(function()
+    while true do
+      local args = {
+    [1] = "Skipped_Wave",
+    [2] = "Button"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
+print("skip")
+wait(1)
+    end
+    
+end)()
+
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
 function FormatTime(seconds)
     local hours = math.floor(seconds / 3600)
