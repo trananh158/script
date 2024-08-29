@@ -8,9 +8,9 @@ print("ingame")
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/main_script"))()
 else
---loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid2/script_fes"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/script_farm"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/script_farm"))()
 
 end 
 
