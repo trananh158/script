@@ -13,7 +13,7 @@ print("ingame")
                         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter[child.Name].CFrame
                         task.wait(1)
                         keypress(0x57)
-                        task.wait(1)
+                        task.wait(2)
                         local args = {
                         [1] = nil,
                         [2] = nil,
