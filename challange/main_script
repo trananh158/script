@@ -9,7 +9,8 @@ print("ingame")
 		-[[
 		Stages
 		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
-			if child.Challenge.Value
+			if child.Challenge.Value == "HIGH COST" and child.Stages.Value == "Monster City" and Workspace.PLAY.Challenge.Enter[chil.Name].Players.Value == 0 then
+			end
 		end
 		]]--
 		if game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room1.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room1.Players.Value == 0 then
