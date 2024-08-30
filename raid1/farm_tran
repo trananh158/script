@@ -1,9 +1,5 @@
         
-while true then
-keypress(0x45)
-wait(5)
-end
---loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/main"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/main"))()
 --[[
 repeat task.wait(2) until game:IsLoaded()
 
