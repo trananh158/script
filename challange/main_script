@@ -8,7 +8,7 @@ print("ingame")
 	while true do 
 		-[[
 		Stages
-		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
+		for _, child in ipairs(game:GetService("ReplicatedStorage"):WaitForChild("Challenge"):GetChildren()) do
 			if child.Challenge.Value == "HIGH COST" and child.Stages.Value == "Monster City" and Workspace.PLAY.Challenge.Enter[chil.Name].Players.Value == 0 then
 			end
 		end
