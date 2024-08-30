@@ -20,6 +20,7 @@ print("ingame")
                         [3] = nil,
                         [4] = "Challenge"
                         }
+      game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
 
 wait(20)
 			end
