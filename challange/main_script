@@ -9,7 +9,7 @@ print("ingame")
 	
 		--Stages
 		for _, child in ipairs(game:GetService("ReplicatedStorage"):WaitForChild("Challenge"):GetChildren()) do
-			if child.ChallengeType.Value == "HIGH COST" and child.Stages.Value == "Monster City" and Workspace.PLAY.Challenge.Enter[child.Name].Players.Value == 0 then
+			if child.ChallengeType.Value == "HIGH COST" and child.Stages.Value == "Monster City" then
                         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter[child.Name].CFrame
                         task.wait(1)
                         keypress(0x57)
