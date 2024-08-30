@@ -10,9 +10,22 @@ print("ingame")
 		Stages
 		for _, child in ipairs(game:GetService("ReplicatedStorage"):WaitForChild("Challenge"):GetChildren()) do
 			if child.Challenge.Value == "HIGH COST" and child.Stages.Value == "Monster City" and Workspace.PLAY.Challenge.Enter[chil.Name].Players.Value == 0 then
+                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter[child.Name].CFrame
+                        task.wait(1)
+                        keypress(0x57)
+                        task.wait(1)
+                        local args = {
+                        [1] = nil,
+                        [2] = nil,
+                        [3] = nil,
+                        [4] = "Challenge"
+                        }
+
+wait(20)
 			end
 		end
-		]]--
+
+--[[
 		if game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room1.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room1.Players.Value == 0 then
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter.Room1.CFrame
 			task.wait(1)
@@ -65,7 +78,7 @@ print("ingame")
     			}
     
           game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
-        else
+        else]]--
 		wait(2)
 		for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()) do
 			if child.Class.Value == "Gogo" and child.Locked.Value ~= "Locked" then
@@ -86,6 +99,6 @@ print("ingame")
 		
 		game:GetService("ReplicatedStorage"):WaitForChild("InfinityCastle"):InvokeServer(unpack(args))
 
-	end
+
 		task.wait(2)
 end
