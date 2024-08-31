@@ -131,7 +131,7 @@ while true do
 local children1 = game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()
 local count1 = #children1
 
-if count1 < 60 then
+if count1 < 1 then
 		local args = {
 			[1] = "Retry"
 		}
