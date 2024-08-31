@@ -65,7 +65,18 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+if game:GetService("Players").LocalPlayer.Name == "trananhf1" then
+repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+local args = {
+    [1] = {
+        [1] = "Gogo",
+        [2] = CFrame.new(75.97322845458984, 386.2890625, 39.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(75.99058532714844, 386, 39.965457916259766)
+}
 
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+end
 
 local checkfarm = 0
 
