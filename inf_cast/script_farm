@@ -135,11 +135,11 @@ while true do
 		if game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then 
 			game_victory = "Thắng"
 		end
-
+                local gem1 = game:GetService("Players").LocalPlayer.Data.Tokens.Value
 		data = {
 		  ["embeds"]=
 		    {{
-		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value,
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value.."\nGem :"..gem1.."💎",
 		      ["color"] = null
 		    }}
 		}
