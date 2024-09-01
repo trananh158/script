@@ -14,6 +14,61 @@ RunService.PreSimulation:Connect(function()
 end)
 
 task.wait(5)
+
+coroutine.resume(coroutine.create(function()
+    task.spawn(function()
+
+	if (workspace:WaitForChild("Maingame"):WaitForChild("Base").Health.Value <= 0 or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true) and _G.checkgame ~= true then
+		_G.checkgame = true
+		game_victory = "non"
+		local children1 = game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()
+		local count1 = #children1
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
+			game_victory = "Thua"
+		end
+		
+		if game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then 
+			game_victory = "Thắng"
+		end
+
+		data = {
+		  ["embeds"]=
+		    {{
+		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value.."("..count1.."/100)",
+		      ["color"] = null
+		    }}
+		}
+
+		local porn = game:GetService("HttpService"):JSONEncode(data)
+        	local headers = {["content-type"] = "application/json"}
+        	local request = http_request or request or HttpPost or syn.request or http.request
+        	local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+		request(sex)
+
+
+		
+
+		if count1 < 90 then
+				local args = {
+					[1] = "Retry"
+				}
+		
+				game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+		else
+				local args = {
+					[1] = "Return"
+				}
+		
+				game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+		  end
+	end
+			
+
+		end)
+	end)
+end))
+
+
 local args = {
     [1] = "Start",
     [2] = "Button"
@@ -113,48 +168,5 @@ while true do
 		
 			game:GetService("ReplicatedStorage"):WaitForChild("UnitPlacements"):InvokeServer(unpack(args))
 		end
-	if (workspace:WaitForChild("Maingame"):WaitForChild("Base").Health.Value <= 0 or game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true) and _G.checkgame ~= true then
-		_G.checkgame = true
-		game_victory = "non"
-		if game:GetService("Players").LocalPlayer.PlayerGui.GameOver.Enabled == true then 
-			game_victory = "Thua"
-		end
-		
-		if game:GetService("Players").LocalPlayer.PlayerGui.GameVictory.Enabled == true then 
-			game_victory = "Thắng"
-		end
-
-		data = {
-		  ["embeds"]=
-		    {{
-		      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n"..game:GetService("Workspace"):WaitForChild("Maingame"):WaitForChild("Setting").Act.Value.."\n"..game_victory.."\n Reroll:"..game:GetService("Players").LocalPlayer.Data.Reroll_Tokens.Value,
-		      ["color"] = null
-		    }}
-		}
-
-		local porn = game:GetService("HttpService"):JSONEncode(data)
-        	local headers = {["content-type"] = "application/json"}
-        	local request = http_request or request or HttpPost or syn.request or http.request
-        	local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
-		request(sex)
-
-
-local children1 = game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()
-local count1 = #children1
-
-if count1 < 90 then
-		local args = {
-			[1] = "Retry"
-		}
-
-		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
-else
-		local args = {
-			[1] = "Return"
-		}
-
-		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
-  end
-wait(5)
-	end
+	wait(2)
 end
