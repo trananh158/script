@@ -21,7 +21,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
 
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1000
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 4000
 local args = {
     [1] = {
         [1] = "Emilian",
@@ -32,7 +32,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5000
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
@@ -43,7 +43,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 5800
 local args = {
     [1] = {
         [1] = "Homuro (Time Traveller)",
@@ -55,7 +55,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
-repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 8000
 local args = {
     [1] = {
         [1] = "Ichongo (True Bankai)",
