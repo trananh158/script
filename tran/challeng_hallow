@@ -58,7 +58,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(a
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
     [1] = {
-        [1] = "Sung (Shadow Monarch)",
+        [1] = "Ichongo (True Bankai)",
         [2] = CFrame.new(67.75739288330078, -20.69817543029785, 160.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
     },
     [2] = Vector3.new(67.7652816772461, -22.190521240234375, 160.5369873046875)
