@@ -14,6 +14,34 @@ RunService.PreSimulation:Connect(function()
 end)
 
 task.wait(5)
+coroutine.wrap(function()
+    while true do
+                if (workspace:WaitForChild("Maingame"):WaitForChild("Base").Health.Value <= 0 then
+                                             data = {
+                  ["embeds"]=
+                    {{
+                      ["description"] = "Name :"..game:GetService("Players").LocalPlayer.Name.."\n thua 💎",
+                      ["color"] = null
+                    }}
+                }
+
+                local porn = game:GetService("HttpService"):JSONEncode(data)
+                local headers = {["content-type"] = "application/json"}
+                local request = http_request or request or HttpPost or syn.request or http.request
+                local sex = {Url = "https://discord.com/api/webhooks/1155312152459104286/w9KlXRsVxqA4QyTsnzDz9eQRrut38tInLPRHCpqVVzeCXIj_HmzcN5i1YIknENxcVjwG", Body = porn, Method = "POST", Headers = headers}
+                request(sex)
+                wait(1)
+                local args = {
+                        [1] = "Retry"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+             end
+             wait(2)
+    end
+end)()
+
+
 local args = {
     [1] = "Start",
     [2] = "Button"
