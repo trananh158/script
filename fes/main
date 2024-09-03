@@ -11,7 +11,7 @@ print("ingame")
 
 else
 
---game:GetService("RunService"):Set3dRenderingEnabled(false)
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 if Workspace.Maingame.Setting.Stages.Value == "Monster City" then 
   loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/challeng_w1"))()
