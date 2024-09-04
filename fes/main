@@ -19,7 +19,7 @@ elseif Workspace.Maingame.Setting.Stages.Value == "Hollow Land" then
   loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/challeng_hallow"))()
 elseif Workspace.Maingame.Setting.Stages.Value == "Large Village" then
   print("Hello")
-  --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/challenge_Villange"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/challenge_Villange"))()
 else 
   loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/script_farm"))()
 end 
