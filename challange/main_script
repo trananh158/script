@@ -7,7 +7,7 @@ print("ingame")
 
 	while true do 
 	
-		--Stages
+		--Stages  Large Village
 		for _, child in ipairs(game:GetService("ReplicatedStorage"):WaitForChild("Challenge"):GetChildren()) do
 			if child.ChallengeType.Value == "HIGH COST" and child.Stages.Value == "Monster City" then
                         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter[child.Name].CFrame
