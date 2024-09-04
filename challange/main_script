@@ -20,9 +20,27 @@ print("ingame")
                         [3] = nil,
                         [4] = "Challenge"
                         }
-      game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+      			game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
 
-wait(20)
+			wait(20)
+			end
+		end
+		wait(2)
+		for _, child in ipairs(game:GetService("ReplicatedStorage"):WaitForChild("Challenge"):GetChildren()) do
+			if child.ChallengeType.Value ~= "HIGH COST" and child.Stages.Value == "Large Village" then
+                        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter[child.Name].CFrame
+                        task.wait(1)
+                        keypress(0x57)
+                        task.wait(2)
+                        local args = {
+                        [1] = nil,
+                        [2] = nil,
+                        [3] = nil,
+                        [4] = "Challenge"
+                        }
+      			game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
+
+			wait(20)
 			end
 		end
 
