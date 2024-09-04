@@ -7,11 +7,11 @@ repeat task.wait(2) until game:IsLoaded()
 
 if game.PlaceId == 17282336195 then
 print("ingame")
---loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/challange/main_script"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/challange/main_script"))()
 
 else
 
---game:GetService("RunService"):Set3dRenderingEnabled(false)
+game:GetService("RunService"):Set3dRenderingEnabled(false)
 
 if Workspace.Maingame.Setting.Stages.Value == "Monster City" then 
   loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/challeng_w1"))()
