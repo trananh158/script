@@ -22,6 +22,7 @@ game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(ar
 
 -- 6,-21,107
 -- 50,-21,71
+--[[
 repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1000
 local args = {
     [1] = {
@@ -32,7 +33,7 @@ local args = {
 }
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-
+]]--
 repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
@@ -56,6 +57,24 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
+local args = {
+    [1] = {
+        [1] = "Ichongo (True Bankai)",
+        [2] = CFrame.new(50.75739288330078, -21.69817543029785, 71.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(50.75739288330078, -21.69817543029785, 71.5369873046875)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
+local args = {
+    [1] = {
+        [1] = "Ichongo (True Bankai)",
+        [2] = CFrame.new(50.75739288330078, -21.69817543029785, 71.60409545898438, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+    },
+    [2] = Vector3.new(50.75739288330078, -21.69817543029785, 71.5369873046875)
+}
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 repeat wait(1) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
     [1] = {
