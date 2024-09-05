@@ -22,10 +22,11 @@ print("ingame")
                         }
       			game:GetService("ReplicatedStorage"):WaitForChild("MapStage"):WaitForChild("event"):InvokeServer(unpack(args))
 
-			wait(20)
+			wait(50)
 			end
 		end
 		wait(2)
+	--[[
 		for _, child in ipairs(game:GetService("ReplicatedStorage"):WaitForChild("Challenge"):GetChildren()) do
 			if child.ChallengeType.Value ~= "HIGH COST" and child.Stages.Value == "Large Village" then
                         game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter[child.Name].CFrame
@@ -43,7 +44,7 @@ print("ingame")
 			wait(20)
 			end
 		end
-
+	]]--
 --[[
 		if game:GetService("ReplicatedStorage"):WaitForChild("Challenge").Room1.ChallengeType.Value == "HIGH COST" and Workspace.PLAY.Challenge.Enter.Room1.Players.Value == 0 then
 			game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = Workspace.PLAY.Challenge.Enter.Room1.CFrame
