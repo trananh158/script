@@ -23,6 +23,22 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Remote"):FireServer(unpack(args))
 
 
+local GameFinished =   workspace:WaitForChild("Maingame"):WaitForChild("Base").Health
+GameFinished:GetPropertyChangedSignal("Value"):Connect(function()
+            if GameFinished.Value < 10 then
+                               local args = {
+                        [1] = "Retry"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
+                        end
+                end)
+
+
+
+
+
+
 repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
 local args = {
     [1] = {
