@@ -29,7 +29,7 @@ end]]--
 if game.PlaceId == 17282336195 then
 print("ingame")
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/main_script"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/main_script"))()
 else
 
 game:GetService("RunService"):Set3dRenderingEnabled(false)
