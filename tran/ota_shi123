@@ -23,6 +23,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("SkipWaveEvent"):FireServer(unpack(args))
 
 while true do
+        keypress(0x45)
 local args = {
     [1] = "Render",
     [2] = {
