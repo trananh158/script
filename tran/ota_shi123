@@ -23,6 +23,13 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("SkipWaveEvent"):FireServer(unpack(args))
 
 while true do
+
+local args = {
+    [1] = "Skip"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("SkipWaveEvent"):FireServer(unpack(args))
+
         keypress(0x45)
 local args = {
     [1] = "Render",
@@ -169,5 +176,5 @@ game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("Un
 
 		game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("EndScreen"):WaitForChild("VoteEvent"):FireServer(unpack(args))]]--
 	end
-wait(3)
+wait(5)
 end 
