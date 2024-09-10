@@ -1,0 +1,180 @@
+
+local RunService = game:GetService("RunService")
+
+local TARGET_FRAME_RATE = 10
+
+local frameStart = os.clock()
+
+RunService.PreSimulation:Connect(function()
+    while os.clock() - frameStart < 1 / TARGET_FRAME_RATE do
+        -- We do nothing until the target time has elapsed
+    end
+
+    -- Mark the start of the next frame right before this one is rendered
+    frameStart = os.clock()
+end)
+
+task.wait(5)
+
+local args = {
+    [1] = "Skip"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("SkipWaveEvent"):FireServer(unpack(args))
+
+while true do
+
+local args = {
+    [1] = "Skip"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("SkipWaveEvent"):FireServer(unpack(args))
+
+        keypress(0x45)
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Shinzi",
+        [2] = 33,
+        [3] = Vector3.new(145.28244018554688, 8.64501953125, 113.4317626953125),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Shinzi",
+        [2] = 33,
+        [3] = Vector3.new(146.6721954345703, 8.64501953125, 120.11347198486328),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Shinzi",
+        [2] = 33,
+        [3] = Vector3.new(149.2962646484375, 8.64501667022705, 119.46430969238281),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Shinzi",
+        [2] = 33,
+        [3] = Vector3.new(148.7307891845703, 8.645018577575684, 121.84817504882812),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Itochi",
+        [2] = 12,
+        [3] = Vector3.new(140.201171875, 8.78737735748291, 116.13020324707031),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Itochi",
+        [2] = 12,
+        [3] = Vector3.new(140.201171875, 8.78737735748291, 115.13020324707031),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Itochi",
+        [2] = 12,
+        [3] = Vector3.new(140.201171875, 8.78737735748291, 114.13020324707031),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Kinaru",
+        [2] = 13,
+        [3] = Vector3.new(147.89215087890625, 8.617914199829102, 114.92414855957031),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Kinaru",
+        [2] = 13,
+        [3] = Vector3.new(146.89215087890625, 8.617914199829102, 114.92414855957031),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Kinaru",
+        [2] = 13,
+        [3] = Vector3.new(145.89215087890625, 8.617914199829102, 114.92414855957031),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+	for _, child in ipairs(workspace:WaitForChild("Units"):GetChildren()) do
+	
+			local args = {
+			[1] = "Upgrade",
+			[2] = child.Name
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+	end
+	
+	if game:GetService("Players").LocalPlayer.PlayerGui.EndScreen.Enabled == true then
+	
+		local args = {
+			[1] = "Retry"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("EndScreen"):WaitForChild("VoteEvent"):FireServer(unpack(args))
+		--[[
+		local args = {
+			[1] = "Next"
+		}
+
+		game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("EndScreen"):WaitForChild("VoteEvent"):FireServer(unpack(args))]]--
+	end
+wait(5)
+end 
