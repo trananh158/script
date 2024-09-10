@@ -2,8 +2,8 @@
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/main"))()
 
 repeat task.wait(2) until game:IsLoaded()
---loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/ota_shi123"))()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/inf_name"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/ota_shi123"))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/inf_name"))()
 
 --[[
 if game.PlaceId == 17282336195 then
