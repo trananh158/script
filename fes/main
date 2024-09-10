@@ -4,6 +4,8 @@ if game:GetService("Players").LocalPlayer.Name == "fasertboom999" then
 print("ingame")
 
 repeat task.wait(2) until game:IsLoaded()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/anime_gua"))()
+
 --[[
 if game.PlaceId == 17282336195 then
 print("ingame")
@@ -25,7 +27,7 @@ else
 end 
 end]]--
 
-
+--[[
 if game.PlaceId == 17282336195 then
 print("ingame")
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
@@ -40,5 +42,5 @@ game:GetService("RunService"):Set3dRenderingEnabled(false)
 loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/fes/script_farm"))()
 
 end
-
+]]--
 end
