@@ -6,7 +6,7 @@ repeat task.wait(2) until game:IsLoaded()
 if game.PlaceId == 11197615267 then
 print("ingame")
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/ota_shi123"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/jump_to_bao"))()
 
 
 else 
