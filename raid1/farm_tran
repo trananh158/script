@@ -2,9 +2,17 @@
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/main"))()
 
 repeat task.wait(2) until game:IsLoaded()
+
+if game.PlaceId == 11197615267 then
+print("ingame")
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/ota_shi123"))()
+
+
+else 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/ota_shi123"))()
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/tran/inf_name"))()
-
+end
 --[[
 if game.PlaceId == 17282336195 then
 print("ingame")
