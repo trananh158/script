@@ -1,0 +1,4 @@
+while true do
+game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")["asuna_dxc21"].Character.HumanoidRootPart.CFrame
+wait(5)
+end
