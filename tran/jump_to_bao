@@ -2,5 +2,5 @@ while true do
 if game:GetService("Players"):FindFirstChild("asuna_dxc21") then
 game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame = game:GetService("Players")["asuna_dxc21"].Character.HumanoidRootPart.CFrame
 end
-wait(5)
+wait(0.5)
 end
