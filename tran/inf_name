@@ -31,7 +31,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("SkipWaveEvent"):FireServer(unpack(args))
 
         keypress(0x45)
-ocal args = {
+local args = {
     [1] = "Render",
     [2] = {
         [1] = "Song Jinwu",
