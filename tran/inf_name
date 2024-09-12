@@ -53,6 +53,19 @@ local args = {
     }
 }
 
+local args = {
+    [1] = "Render",
+    [2] = {
+        [1] = "Vogita (Super II)",
+        [2] = 18,
+        [3] = Vector3.new(-202.62673950195312, 2.002454996109009, -57.51667785644531),
+        [4] = 0
+    }
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
+
+
 game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
 
 local args = {
