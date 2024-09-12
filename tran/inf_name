@@ -56,14 +56,12 @@ local args = {
 local args = {
     [1] = "Render",
     [2] = {
-        [1] = "Vogita (Super II)",
-        [2] = 18,
-        [3] = Vector3.new(-202.62673950195312, 2.002454996109009, -57.51667785644531),
+        [1] = "Haruka Rin",
+        [2] = 25,
+        [3] = Vector3.new(-275.30413818359375, 1.9442038536071777, -114.02750396728516),
         [4] = 0
     }
 }
-
-game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
 
 
 game:GetService("ReplicatedStorage"):WaitForChild("Networking"):WaitForChild("UnitEvent"):FireServer(unpack(args))
