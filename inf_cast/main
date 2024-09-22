@@ -3,8 +3,8 @@ wait(2)
 for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:GetChildren()) do
 			if child.Class.Value == "Gogo" and child.Locked.Value ~= "Locked" then
 				
-			print(child.Name)
-			local args = {
+			--print(child.Name)
+			--local args = {
 				[1] = (child)
 			}
 
