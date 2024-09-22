@@ -8,7 +8,10 @@ for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:Get
 			--	[1] = (child)
 			--} unpack(args
 
-			game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer((child))
+			--game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer((child))
+coroutine.warp(function()
+                        game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer((child))
+end)()
 			end
 		end
 wait(1)
