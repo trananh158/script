@@ -12,6 +12,7 @@ for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:Get
 coroutine.wrap(function()
                         game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer((child))
 end)()
+wait(0.2)
 			end
 		end
 wait(1)
