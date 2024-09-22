@@ -9,7 +9,7 @@ for _, child in ipairs(game:GetService("Players").LocalPlayer.UnitsInventory:Get
 			--} unpack(args
 
 			--game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer((child))
-coroutine.wrap(function()
+couroutine.wrap(function()
                         game:GetService("ReplicatedStorage"):WaitForChild("Lab"):InvokeServer((child))
 end)()
 			end
