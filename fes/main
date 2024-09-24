@@ -11,6 +11,8 @@ if game.PlaceId == 17282336195 then
 print("ingame")
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/challange/main_script"))()
 
+elif game:GetService("Players").LocalPlayer.Name == "trananhd1" then
+   loadstring(game:HttpGet("https://raw.githubusercontent.com/Exunys/AirHub/main/AirHub.lua"))()
 else
 
 game:GetService("RunService"):Set3dRenderingEnabled(false)
