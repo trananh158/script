@@ -15,7 +15,7 @@ end)()
 wait(0.2)
 			end
 		end
-wait(1)
+wait(4)
 local args = {
     [1] = "Start",
     [2] = game:GetService("Players").LocalPlayer.InfinityCastle["Room50"].Name
