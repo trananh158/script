@@ -48,7 +48,7 @@ local args = {
     [2] = Vector3.new(34.75767135620117, 385, -43.646690368652344)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+--game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 repeat wait(0.55) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
 local args = {
     [1] = {
@@ -58,7 +58,7 @@ local args = {
     [2] = Vector3.new(34.75767135620117, 385, -43.646690368652344)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+--game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1450
 local args = {
     [1] = {
@@ -97,7 +97,7 @@ end
 
 local checkfarm = 0
 
-while checkfarm < 2  do
+while false do
 checkfarm = 0
 for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
 	if game:GetService("Players").LocalPlayer.Name == "trananhf1" then
