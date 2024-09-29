@@ -39,16 +39,15 @@ GameFinished:GetPropertyChangedSignal("Value"):Connect(function()
 
 
 
-repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
+repeat wait(0.5) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
-        [1] = "bolm",
-        [2] = CFrame.new(34.857452392578125, 386.2886047363281, -43.65928268432617, 1, -1.3877787807814457e-16, 0, 0, 1, 0, 0, 0, 1)
-    },
+        [1] = "Gogo",
+                [2] = CFrame.new(-25.09463882446289, 387.3954772949219, -43.93950271606445, 1, 0, 0, 0, 1, 0, 0, 0, 1)},
     [2] = Vector3.new(34.75767135620117, 385, -43.646690368652344)
 }
 
---game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 repeat wait(0.55) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 500
 local args = {
     [1] = {
