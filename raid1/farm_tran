@@ -3,7 +3,7 @@
 
 repeat task.wait(2) until game:IsLoaded()
 
-
+--[[
 if game.PlaceId == 17282336195 then
 print("ingame")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
@@ -14,7 +14,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/mai
 
 end
 
---[[
+]]--
 local RunService = game:GetService("RunService")
 local TARGET_FRAME_RATE = 10
 
@@ -85,7 +85,7 @@ local args = {
     },
     [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
 }
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+--repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
@@ -116,7 +116,7 @@ local args = {
 
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
-repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
+--repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 1250
 local args = {
     [1] = {
         [1] = "Fleeren (Full Power)",
@@ -125,7 +125,7 @@ local args = {
     [2] = Vector3.new(-463.7160949707031, 67.5599365234375, -697.4560546875)
 }
 
-game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+--game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 repeat wait(2) until game:GetService("Players").LocalPlayer.GameData.Coins.Value >= 2000
 local args = {
@@ -216,5 +216,4 @@ while true do
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
 	end
 end
-]]--
 
