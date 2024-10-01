@@ -60,7 +60,7 @@ local args = {
 game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
 
 
-while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text ~= "Wave : 11"  do
+while game:GetService("Players").LocalPlayer.PlayerGui.Main.MainFrame.Wave.Text ~= "Wave : 5"  do
 	pcall(function()
 
 		for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
