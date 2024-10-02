@@ -3,7 +3,6 @@
 
 repeat task.wait(2) until game:IsLoaded()
 
---[[
 if game.PlaceId == 17282336195 then
 print("ingame")
 loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/inf_cast/main"))()
@@ -13,8 +12,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/mai
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/trananh158/script/main/raid2/script_tran"))()
 
 end
-
-]]--
+--[[
 local RunService = game:GetService("RunService")
 local TARGET_FRAME_RATE = 10
 
@@ -222,3 +220,4 @@ while true do
 		game:GetService("ReplicatedStorage"):WaitForChild("Teleport"):InvokeServer(unpack(args))
 	end
 end
+]]--
