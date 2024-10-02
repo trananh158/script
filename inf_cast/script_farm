@@ -133,6 +133,36 @@ end
 print("Game start")
 while true do 
 
+	local args = {
+	    [1] = {
+	        [1] = "Gogo",
+	        [2] = CFrame.new(75.97322845458984, 386.2890625, 39.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    },
+	    [2] = Vector3.new(75.99058532714844, 386, 39.965457916259766)
+	}
+	
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+	
+	local args = {
+	    [1] = {
+	        [1] = "Aozort",
+	        [2] = CFrame.new(75.97322845458984, 386.2890625, 39.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    },
+	    [2] = Vector3.new(75.99058532714844, 386, 39.965457916259766)
+	}
+	
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+	local args = {
+	    [1] = {
+	        [1] = "Susuna",
+	        [2] = CFrame.new(75.97322845458984, 386.2890625, 39.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    },
+	    [2] = Vector3.new(75.99058532714844, 386, 39.965457916259766)
+	}
+	
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
+
 	for _, child in ipairs(workspace:WaitForChild("Maingame"):WaitForChild("Unit"):GetChildren()) do
 			local args = {
 				[1] = "Upgrade",
