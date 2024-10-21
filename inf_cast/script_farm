@@ -133,6 +133,18 @@ end
 print("Game start")
 while true do 
 
+	
+	
+	local args = {
+	    [1] = {
+	        [1] = "Subaro",
+	        [2] = CFrame.new(75.97322845458984, 386.2890625, 39.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+	    },
+	    [2] = Vector3.new(75.99058532714844, 386, 39.965457916259766)
+	}
+	
+	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
 	local args = {
 	    [1] = {
 	        [1] = "Gogo",
@@ -142,16 +154,7 @@ while true do
 	}
 	
 	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
-	
-	local args = {
-	    [1] = {
-	        [1] = "Aozort",
-	        [2] = CFrame.new(75.97322845458984, 386.2890625, 39.9587516784668, 1, 0, 0, 0, 1, 0, 0, 0, 1)
-	    },
-	    [2] = Vector3.new(75.99058532714844, 386, 39.965457916259766)
-	}
-	
-	game:GetService("ReplicatedStorage"):WaitForChild("Units"):InvokeServer(unpack(args))
+
 	local args = {
 	    [1] = {
 	        [1] = "Susuna",
