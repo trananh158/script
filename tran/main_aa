@@ -6,3 +6,11 @@ if game:GetService("Players").LocalPlayer.Name == "trananhd4" then
 
 game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
 end
+if game:GetService("Players").LocalPlayer.Name == "khuaaoxank_21" then
+ repeat task.wait(5) until game:IsLoaded()
+local args = {
+    [1] = "kai_planet_level_4"
+}
+
+game:GetService("ReplicatedStorage"):WaitForChild("endpoints"):WaitForChild("client_to_server"):WaitForChild("request_matchmaking"):InvokeServer(unpack(args))
+end
