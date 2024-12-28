@@ -13,7 +13,7 @@ end
 
 name_lay = game:GetService("Players").LocalPlayer.Name 
 
-if game:GetService("Players").LocalPlayer.Name == "trananh404" or name_lay == "VTTT2007_2" then
+if game:GetService("Players").LocalPlayer.Name == "trananh404" or name_lay == "VTTT2007_2" or name_lay == "phapsutrungquoc033" then
   local args = {
     [1] = "christmas_event"
 }
