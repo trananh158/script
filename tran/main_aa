@@ -3,7 +3,7 @@ wait (5) game:GetService("TeleportService"):Teleport(8304191830)
     end);
 
 
-if game:GetService("Players").LocalPlayer.Name == "trananhd14" then
+if game:GetService("Players").LocalPlayer.Name == "trananhd4" then
   local args = {
     [1] = "christmas_event"
 }
